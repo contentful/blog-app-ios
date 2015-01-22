@@ -8,7 +8,7 @@
         <!--Blog posts-->
         <scene sceneID="bai-BN-PmX">
             <objects>
-                <tableViewController id="EVZ-pB-Ji5" customClass="BlogPostList" sceneMemberID="viewController">
+                <tableViewController id="EVZ-pB-Ji5" customClass="BlogPostList" customModule="Blog" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jXL-Tf-jc7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,19 +37,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The best of Obama's State of the Union address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKG-Bh-Mwf">
-                                <rect key="frame" x="26" y="30" width="401" height="22"/>
+                                <rect key="frame" x="26" y="30" width="400.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15. JAN 2015. BY JACK JOHNSON" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c1-gv-ekQ">
-                                <rect key="frame" x="26" y="62" width="198" height="15"/>
+                                <rect key="frame" x="26" y="61" width="197.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.63529411764705879" green="0.66274509803921566" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-D4-jIe">
-                                <rect key="frame" x="26" y="87" width="548" height="339"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-D4-jIe">
+                                <rect key="frame" x="26" y="86" width="548" height="338.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
 

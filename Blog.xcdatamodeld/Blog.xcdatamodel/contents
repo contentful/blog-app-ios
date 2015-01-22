@@ -1,1 +1,41 @@
-<?xml version="1.0" encoding="utf8"?><model lastSavedToolsVersion="6244" iOSVersion="Automatic" minimumToolsVersion="Automatic" userDefinedModelVersionIdentifier="" documentVersion="1.0" macOSVersion="Automatic" systemVersion="14A361c" type="com.apple.IDECoreDataModeler.DataModel"><entity representedClassName="Asset" syncable="YES" name="Asset"><attribute syncable="YES" attributeType="Float" optional="YES" name="height"/><attribute syncable="YES" attributeType="String" optional="YES" name="identifier"/><attribute syncable="YES" attributeType="String" optional="YES" name="internetMediaType"/><attribute syncable="YES" attributeType="String" optional="YES" name="url"/><attribute syncable="YES" attributeType="Float" optional="YES" name="width"/><relationship syncable="YES" inverseEntity="Author" destinationEntity="Author" optional="YES" toMany="YES" deletionRule="Nullify" inverseName="profilePhoto" name="AuthorInverse"/><relationship syncable="YES" inverseEntity="Post" destinationEntity="Post" optional="YES" toMany="YES" deletionRule="Nullify" inverseName="featuredImage" name="PostInverse"/></entity><entity representedClassName="Author" syncable="YES" name="Author"><attribute syncable="YES" attributeType="String" optional="YES" name="biography"/><attribute syncable="YES" attributeType="String" optional="YES" name="identifier"/><attribute syncable="YES" attributeType="String" optional="YES" name="name"/><attribute syncable="YES" attributeType="String" optional="YES" name="website"/><relationship syncable="YES" inverseEntity="Post" destinationEntity="Post" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" inverseName="author" name="createdEntries"/><relationship syncable="YES" inverseEntity="Asset" destinationEntity="Asset" maxCount="1" optional="YES" deletionRule="Nullify" inverseName="AuthorInverse" name="profilePhoto"/></entity><entity representedClassName="Post" syncable="YES" name="Post"><attribute syncable="YES" attributeType="String" optional="YES" name="body"/><attribute syncable="YES" attributeType="String" optional="YES" name="category"/><attribute syncable="YES" attributeType="Boolean" optional="YES" name="comments"/><attribute syncable="YES" attributeType="Date" optional="YES" name="date"/><attribute syncable="YES" attributeType="String" optional="YES" name="identifier"/><attribute syncable="YES" attributeType="String" optional="YES" name="slug"/><attribute syncable="YES" attributeType="String" optional="YES" name="title"/><relationship syncable="YES" inverseEntity="Author" destinationEntity="Author" maxCount="1" optional="YES" deletionRule="Nullify" inverseName="createdEntries" name="author"/><relationship syncable="YES" inverseEntity="Asset" destinationEntity="Asset" maxCount="1" optional="YES" deletionRule="Nullify" inverseName="PostInverse" name="featuredImage"/></entity><entity representedClassName="SyncInfo" syncable="YES" name="SyncInfo"><attribute syncable="YES" attributeType="Date" optional="YES" name="lastSyncTimestamp"/><attribute syncable="YES" attributeType="String" optional="YES" name="syncToken"/></entity><elements><element height="0" positionY="0" positionX="0" width="0" name="Asset"/><element height="0" positionY="0" positionX="0" width="0" name="Author"/><element height="0" positionY="0" positionX="0" width="0" name="Post"/><element height="0" positionY="0" positionX="0" width="0" name="SyncInfo"/></elements></model>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C99d" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Asset" representedClassName="Blog.Asset" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="internetMediaType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Float" syncable="YES"/>
+        <relationship name="AuthorInverse" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Author" inverseName="profilePhoto" inverseEntity="Author" syncable="YES"/>
+        <relationship name="PostInverse" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="featuredImage" inverseEntity="Post" syncable="YES"/>
+    </entity>
+    <entity name="Author" representedClassName="Blog.Author" syncable="YES">
+        <attribute name="biography" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="createdEntries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Post" inverseName="author" inverseEntity="Post" syncable="YES"/>
+        <relationship name="profilePhoto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Asset" inverseName="AuthorInverse" inverseEntity="Asset" syncable="YES"/>
+    </entity>
+    <entity name="Post" representedClassName="Blog.Post" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comments" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="slug" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Author" inverseName="createdEntries" inverseEntity="Author" syncable="YES"/>
+        <relationship name="featuredImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Asset" inverseName="PostInverse" inverseEntity="Asset" syncable="YES"/>
+    </entity>
+    <entity name="SyncInfo" representedClassName="Blog.SyncInfo" syncable="YES">
+        <attribute name="lastSyncTimestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="syncToken" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Asset" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Author" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="Post" positionX="0" positionY="0" width="128" height="180"/>
+        <element name="SyncInfo" positionX="0" positionY="0" width="128" height="75"/>
+    </elements>
+</model>
