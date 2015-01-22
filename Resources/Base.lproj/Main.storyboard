@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C99d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z5f-I4-bDb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blog posts-->
+        <scene sceneID="bai-BN-PmX">
+            <objects>
+                <tableViewController id="EVZ-pB-Ji5" customClass="BlogPostList" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jXL-Tf-jc7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="EVZ-pB-Ji5" id="YTS-Ag-Av8"/>
+                            <outlet property="delegate" destination="EVZ-pB-Ji5" id="RkO-4m-Vzy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Blog posts" id="F54-il-Dcp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCI-b9-WO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="594"/>
+        </scene>
+        <!--Blog post-->
+        <scene sceneID="pub-UC-ixc">
+            <objects>
+                <viewController storyboardIdentifier="BlogPostViewControllerId" title="Blog post" id="7IK-7D-5cg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="puU-IV-bmf"/>
+                        <viewControllerLayoutGuide type="bottom" id="ien-wn-dN1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LY9-sN-gdc" customClass="UIScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The best of Obama's State of the Union address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKG-Bh-Mwf">
+                                <rect key="frame" x="26" y="30" width="401" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15. JAN 2015. BY JACK JOHNSON" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c1-gv-ekQ">
+                                <rect key="frame" x="26" y="62" width="198" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.63529411764705879" green="0.66274509803921566" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-D4-jIe">
+                                <rect key="frame" x="26" y="87" width="548" height="339"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
+
+The first part of the plan would raise taxes on capital gains — money made through investments — for high-income earners and on inherited wealth. Both changes are meant to target the richest U.S. citizens. Another part of the plan raises taxes on large financial institutions.
+
+The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
+
+The first part of the plan would raise taxes on capital gains — money made through investments — for high-income earners and on inherited wealth. Both changes are meant to target the richest U.S. citizens. Another part of the plan raises taxes on large financial institutions.
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EKG-Bh-Mwf" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" priority="750" constant="10" id="0Q9-gk-Lif"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EKG-Bh-Mwf" secondAttribute="trailing" constant="50" id="AqP-KK-uo8"/>
+                            <constraint firstItem="6c1-gv-ekQ" firstAttribute="width" secondItem="EKG-Bh-Mwf" secondAttribute="width" id="BXm-YR-L6h"/>
+                            <constraint firstItem="6c1-gv-ekQ" firstAttribute="top" secondItem="EKG-Bh-Mwf" secondAttribute="bottom" constant="10" id="Bcl-tx-xcu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EKG-Bh-Mwf" secondAttribute="trailing" constant="50" id="Cv1-Tb-i3S"/>
+                            <constraint firstItem="6c1-gv-ekQ" firstAttribute="top" secondItem="puU-IV-bmf" secondAttribute="bottom" constant="40" id="OKx-nG-Jok"/>
+                            <constraint firstItem="EKG-Bh-Mwf" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="TGy-PW-3kQ"/>
+                            <constraint firstItem="6c1-gv-ekQ" firstAttribute="width" secondItem="EKG-Bh-Mwf" secondAttribute="width" id="WwC-Lx-AZA"/>
+                            <constraint firstItem="6c1-gv-ekQ" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="bqp-dR-A9V"/>
+                            <constraint firstItem="wlC-D4-jIe" firstAttribute="top" secondItem="6c1-gv-ekQ" secondAttribute="bottom" constant="10" id="mzu-Gc-3yf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wlC-D4-jIe" secondAttribute="trailing" constant="10" id="nH1-LQ-OB6"/>
+                            <constraint firstItem="wlC-D4-jIe" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="nHI-bO-bNw"/>
+                            <constraint firstItem="6c1-gv-ekQ" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="xEx-Lk-Fkt"/>
+                            <constraint firstItem="EKG-Bh-Mwf" firstAttribute="top" secondItem="puU-IV-bmf" secondAttribute="bottom" constant="10" id="ySu-TZ-V2b"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Cv1-Tb-i3S"/>
+                                <exclude reference="TGy-PW-3kQ"/>
+                                <exclude reference="BXm-YR-L6h"/>
+                                <exclude reference="OKx-nG-Jok"/>
+                                <exclude reference="WwC-Lx-AZA"/>
+                                <exclude reference="bqp-dR-A9V"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckI-fW-6Wx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="593"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ULd-J0-Sct">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z5f-I4-bDb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bo9-Ao-qhd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EVZ-pB-Ji5" kind="relationship" relationship="rootViewController" id="Hy0-7g-Lkz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mBC-Ko-tnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="594"/>
+        </scene>
+    </scenes>
+</document>
