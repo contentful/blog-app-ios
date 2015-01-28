@@ -20,6 +20,13 @@ target 'Blog' do
 pod 'ContentfulPersistence', :path => '../contentful-persistence.objc'
 
 pod 'ContentfulDialogs'
-pod 'ContentfulStyle'
+pod 'ContentfulStyle', :head
 
 end
+
+target 'BlogTests' do
+
+pod 'FBSnapshotTestCase'
+
+end
+

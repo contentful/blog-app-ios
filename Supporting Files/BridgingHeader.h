@@ -10,3 +10,5 @@
 #import <ContentfulDeliveryAPI/ContentfulDeliveryAPI.h>
 #import <ContentfulPersistence/CoreDataFetchDataSource.h>
 #import <ContentfulPersistence/CoreDataManager.h>
+#import <ContentfulStyle/UIColor+Contentful.h>
+#import <ContentfulStyle/UIFont+Contentful.h>

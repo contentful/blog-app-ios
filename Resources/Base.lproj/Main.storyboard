@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C99d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z5f-I4-bDb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z5f-I4-bDb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -27,7 +27,7 @@
         <!--Blog post-->
         <scene sceneID="pub-UC-ixc">
             <objects>
-                <viewController storyboardIdentifier="BlogPostViewControllerId" title="Blog post" id="7IK-7D-5cg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlogPostViewControllerId" title="Blog post" id="7IK-7D-5cg" customClass="BlogPostViewController" customModule="Blog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="puU-IV-bmf"/>
                         <viewControllerLayoutGuide type="bottom" id="ien-wn-dN1"/>
@@ -37,21 +37,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The best of Obama's State of the Union address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKG-Bh-Mwf">
-                                <rect key="frame" x="26" y="30" width="400.5" height="21.5"/>
+                                <rect key="frame" x="16" y="30" width="400.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15. JAN 2015. BY JACK JOHNSON" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c1-gv-ekQ">
-                                <rect key="frame" x="26" y="61" width="197.5" height="14.5"/>
+                                <rect key="frame" x="16" y="61" width="600" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.63529411764705879" green="0.66274509803921566" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-D4-jIe">
-                                <rect key="frame" x="26" y="86" width="548" height="338.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-D4-jIe">
+                                <rect key="frame" x="0.0" y="86" width="600" height="499.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
+
+The first part of the plan would raise taxes on capital gains — money made through investments — for high-income earners and on inherited wealth. Both changes are meant to target the richest U.S. citizens. Another part of the plan raises taxes on large financial institutions.
+
+The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
 
 The first part of the plan would raise taxes on capital gains — money made through investments — for high-income earners and on inherited wealth. Both changes are meant to target the richest U.S. citizens. Another part of the plan raises taxes on large financial institutions.
 
@@ -65,19 +69,23 @@ The first part of the plan would raise taxes on capital gains — money made thr
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EKG-Bh-Mwf" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" priority="750" constant="10" id="0Q9-gk-Lif"/>
+                            <constraint firstItem="EKG-Bh-Mwf" firstAttribute="width" relation="lessThanOrEqual" secondItem="LY9-sN-gdc" secondAttribute="width" priority="750" constant="-50" id="0AW-9s-CKS"/>
+                            <constraint firstItem="EKG-Bh-Mwf" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" priority="750" id="0Q9-gk-Lif"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EKG-Bh-Mwf" secondAttribute="trailing" constant="50" id="AqP-KK-uo8"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="width" secondItem="EKG-Bh-Mwf" secondAttribute="width" id="BXm-YR-L6h"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="top" secondItem="EKG-Bh-Mwf" secondAttribute="bottom" constant="10" id="Bcl-tx-xcu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EKG-Bh-Mwf" secondAttribute="trailing" constant="50" id="Cv1-Tb-i3S"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="top" secondItem="puU-IV-bmf" secondAttribute="bottom" constant="40" id="OKx-nG-Jok"/>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="TGy-PW-3kQ"/>
+                            <constraint firstAttribute="width" secondItem="wlC-D4-jIe" secondAttribute="width" id="VuH-LP-Ud0"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="width" secondItem="EKG-Bh-Mwf" secondAttribute="width" id="WwC-Lx-AZA"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="6c1-gv-ekQ" secondAttribute="width" id="ZtB-He-CHI"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="bqp-dR-A9V"/>
                             <constraint firstItem="wlC-D4-jIe" firstAttribute="top" secondItem="6c1-gv-ekQ" secondAttribute="bottom" constant="10" id="mzu-Gc-3yf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wlC-D4-jIe" secondAttribute="trailing" constant="10" id="nH1-LQ-OB6"/>
                             <constraint firstItem="wlC-D4-jIe" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="nHI-bO-bNw"/>
-                            <constraint firstItem="6c1-gv-ekQ" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="xEx-Lk-Fkt"/>
+                            <constraint firstItem="6c1-gv-ekQ" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" id="xEx-Lk-Fkt"/>
+                            <constraint firstItem="wlC-D4-jIe" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leading" id="yKI-TW-uB7"/>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="top" secondItem="puU-IV-bmf" secondAttribute="bottom" constant="10" id="ySu-TZ-V2b"/>
                         </constraints>
                         <variation key="default">
@@ -88,9 +96,16 @@ The first part of the plan would raise taxes on capital gains — money made thr
                                 <exclude reference="OKx-nG-Jok"/>
                                 <exclude reference="WwC-Lx-AZA"/>
                                 <exclude reference="bqp-dR-A9V"/>
+                                <exclude reference="nH1-LQ-OB6"/>
+                                <exclude reference="nHI-bO-bNw"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="bodyView" destination="wlC-D4-jIe" id="11D-52-CZ9"/>
+                        <outlet property="metadataLabel" destination="6c1-gv-ekQ" id="oX7-tv-5ZP"/>
+                        <outlet property="titleLabel" destination="EKG-Bh-Mwf" id="qdi-6I-bbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckI-fW-6Wx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

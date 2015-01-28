@@ -33,11 +33,12 @@ PODS:
     - TSMiniWebBrowser@dblock
   - ContentfulPersistence (0.1.0):
     - ContentfulDeliveryAPI (~> 1.4.7)
-  - ContentfulStyle (0.2.0):
+  - ContentfulStyle (HEAD based on 0.2.0):
     - EDColor
     - LatoFont
   - DDPageControl (0.1)
   - EDColor (0.4.0)
+  - FBSnapshotTestCase (1.5)
   - ISO8601DateFormatter (0.7)
   - LatoFont (1.0.0)
   - TSMiniWebBrowser@dblock (1.1)
@@ -45,7 +46,8 @@ PODS:
 DEPENDENCIES:
   - ContentfulDialogs
   - ContentfulPersistence (from `../contentful-persistence.objc`)
-  - ContentfulStyle
+  - ContentfulStyle (HEAD)
+  - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
   ContentfulPersistence:
@@ -61,6 +63,7 @@ SPEC CHECKSUMS:
   ContentfulStyle: 0f41944b1efd8bba2a8f0c1ac0cf3910b1105949
   DDPageControl: 86d07bda58e325a427fb0d7c8fb650add2ff35c2
   EDColor: bcdb8600b7a456f4408ce1d7e7fc001588919254
+  FBSnapshotTestCase: e2914fbaabccea1dcc773d6a16b1c24540642488
   ISO8601DateFormatter: 59731cd880cf87e71b4fa95f0d6b713dcbc4cbce
   LatoFont: 325a86578945d04cce8039deaf163229c63e2258
   TSMiniWebBrowser@dblock: 4e73ee955fcf2e9f5d98f7a17460454ac059bc37
