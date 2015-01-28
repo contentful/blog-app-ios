@@ -8,6 +8,7 @@
 
 #import <CocoaPods-Keys/BlogKeys.h>
 #import <ContentfulDeliveryAPI/ContentfulDeliveryAPI.h>
+#import <ContentfulDialogs/CDAAboutUsViewController.h>
 #import <ContentfulPersistence/CoreDataFetchDataSource.h>
 #import <ContentfulPersistence/CoreDataManager.h>
 #import <ContentfulStyle/UIColor+Contentful.h>

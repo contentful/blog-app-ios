@@ -33,6 +33,8 @@ class BlogPostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        addInfoButton()
+
         bodyView.font = UIFont(name: "PT Serif", size: 15.0)
         bodyView.textContainerInset = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 40.0, right: 10.0)
 
