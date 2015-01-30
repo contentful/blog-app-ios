@@ -35,14 +35,18 @@ class BlogPostViewController: UIViewController {
 
         addInfoButton()
 
-        bodyView.font = UIFont(name: "PT Serif", size: 15.0)
         bodyView.textContainerInset = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 40.0, right: 10.0)
 
         metadataLabel.font = UIFont.bodyTextFont().fontWithSize(12.0)
         metadataLabel.textColor = UIColor.contentfulDeactivatedColor()
         titleLabel.font = UIFont.boldTitleFont().fontWithSize(24.0)
 
-        bodyView.text = post.body
+        let parser = BPParser()
+        let document = parser.parse(post.body)
+        let converter = BPAttributedStringConverter()
+        converter.displaySettings.defaultFont = UIFont(name: "PT Serif", size: 15.0)
+        bodyView.attributedText = converter.convertDocument(document)
+
         titleLabel.text = post.title
 
         let dateString = NSDateFormatter.customDateFormatter().stringFromDate(post.date)

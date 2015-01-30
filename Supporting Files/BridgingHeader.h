@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Contentful GmbH. All rights reserved.
 //
 
+#import <Bypass/Bypass.h>
 #import <CocoaPods-Keys/BlogKeys.h>
 #import <ContentfulDeliveryAPI/ContentfulDeliveryAPI.h>
 #import <ContentfulDialogs/CDAAboutUsViewController.h>

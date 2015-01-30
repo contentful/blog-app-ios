@@ -19,6 +19,7 @@ target 'Blog' do
 # work with a local copy for simplicity's sake
 pod 'ContentfulPersistence', :path => '../contentful-persistence.objc'
 
+pod 'Bypass'
 pod 'ContentfulDialogs'
 pod 'ContentfulStyle', :head
 

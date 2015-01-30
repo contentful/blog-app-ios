@@ -44,6 +44,7 @@ PODS:
   - TSMiniWebBrowser@dblock (1.1)
 
 DEPENDENCIES:
+  - Bypass
   - ContentfulDialogs
   - ContentfulPersistence (from `../contentful-persistence.objc`)
   - ContentfulStyle (HEAD)
