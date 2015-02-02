@@ -61,7 +61,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-D4-jIe">
                                 <rect key="frame" x="0.0" y="87" width="600" height="410"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
+                                <string key="text">The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
 
 The first part of the plan would raise taxes on capital gains — money made through investments — for high-income earners and on inherited wealth. Both changes are meant to target the richest U.S. citizens. Another part of the plan raises taxes on large financial institutions.
 
@@ -70,7 +70,7 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
 The first part of the plan would raise taxes on capital gains — money made through investments — for high-income earners and on inherited wealth. Both changes are meant to target the richest U.S. citizens. Another part of the plan raises taxes on large financial institutions.
 
 The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -224,10 +224,10 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
             </objects>
             <point key="canvasLocation" x="787" y="1349"/>
         </scene>
-        <!--Blog posts-->
+        <!--Blog posts by Author-->
         <scene sceneID="wrC-rd-5zV">
             <objects>
-                <tableViewController title="Blog posts" id="b9K-JG-cZd" customClass="BlogPostByAuthorList" customModule="Blog" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Blog posts" id="b9K-JG-cZd" userLabel="Blog posts by Author" customClass="BlogPostByAuthorList" customModule="Blog" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="veh-8t-QOO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
