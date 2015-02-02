@@ -5,5 +5,6 @@ public enum SegueIdentifier : String {
 }
 
 public enum ViewControllerStoryboardIdentifier : String {
+    case AuthorViewControllerId = "AuthorViewControllerId"
     case BlogPostViewControllerId = "BlogPostViewControllerId"
 }

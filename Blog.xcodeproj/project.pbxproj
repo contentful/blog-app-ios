@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45E62918D457DEFEA0FD7E05 /* libPods-Blog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF133A2FF63E15A0645A9A08 /* libPods-Blog.a */; };
+		52968236F8CD73124D89E118 /* libPods-Blog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD298FB237962F621B116880 /* libPods-Blog.a */; };
 		6009A91F1C1749982E9C5660 /* libPods-BlogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FF5C8D95A9C7B5D6F09090 /* libPods-BlogTests.a */; };
 		A11232651A71BB5D0055C330 /* StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11232641A71BB5D0055C330 /* StoryboardIdentifiers.swift */; };
 		A1A6D3BB1A71962F00B08959 /* Blog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1A6D3B91A71962F00B08959 /* Blog.xcdatamodeld */; };
@@ -27,6 +27,7 @@
 		A1B954C71A70FE6800B4F200 /* BlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B954C61A70FE6800B4F200 /* BlogTests.swift */; };
 		A1BE2AE91A72512800FC53EC /* BlogPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE2AE81A72512800FC53EC /* BlogPostViewController.swift */; };
 		A1FFCEF01A7FB111002F82A6 /* BlogPostByAuthorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FFCEEF1A7FB111002F82A6 /* BlogPostByAuthorList.swift */; };
+		A1FFCEF21A7FCCEA002F82A6 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FFCEF11A7FCCEA002F82A6 /* AuthorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,8 @@
 		A1B954C61A70FE6800B4F200 /* BlogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTests.swift; sourceTree = "<group>"; };
 		A1BE2AE81A72512800FC53EC /* BlogPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostViewController.swift; sourceTree = "<group>"; };
 		A1FFCEEF1A7FB111002F82A6 /* BlogPostByAuthorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostByAuthorList.swift; sourceTree = "<group>"; };
-		CF133A2FF63E15A0645A9A08 /* libPods-Blog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Blog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1FFCEF11A7FCCEA002F82A6 /* AuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
+		AD298FB237962F621B116880 /* libPods-Blog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Blog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28EBF7B59D270CF1DEFB976 /* Pods-Blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blog/Pods-Blog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45E62918D457DEFEA0FD7E05 /* libPods-Blog.a in Frameworks */,
+				52968236F8CD73124D89E118 /* libPods-Blog.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +151,7 @@
 				A11232631A71BB4F0055C330 /* Generated */,
 				A1A6D3C91A71968200B08959 /* Model */,
 				A1B954B01A70FE6800B4F200 /* AppDelegate.swift */,
+				A1FFCEF11A7FCCEA002F82A6 /* AuthorViewController.swift */,
 				A1FFCEEF1A7FB111002F82A6 /* BlogPostByAuthorList.swift */,
 				A1B954B21A70FE6800B4F200 /* BlogPostList.swift */,
 				A1BE2AE81A72512800FC53EC /* BlogPostViewController.swift */,
@@ -192,8 +195,8 @@
 		E85E248355BCA4770FCE6114 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CF133A2FF63E15A0645A9A08 /* libPods-Blog.a */,
 				A0FF5C8D95A9C7B5D6F09090 /* libPods-BlogTests.a */,
+				AD298FB237962F621B116880 /* libPods-Blog.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				A1A6D3D31A719AF300B08959 /* ContentfulDataManager.swift in Sources */,
 				A1B954B11A70FE6800B4F200 /* AppDelegate.swift in Sources */,
 				A1FFCEF01A7FB111002F82A6 /* BlogPostByAuthorList.swift in Sources */,
+				A1FFCEF21A7FCCEA002F82A6 /* AuthorViewController.swift in Sources */,
 				A1B68C7D1A791684001A5A0D /* CustomDateFormatter.swift in Sources */,
 				A1A6D3CD1A7196E400B08959 /* Post.swift in Sources */,
 			);
