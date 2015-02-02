@@ -9,6 +9,7 @@
 import UIKit
 
 class BlogPostViewController: UIViewController {
+    @IBOutlet weak var authorButton: UIButton!
     @IBOutlet weak var bodyView: UITextView!
     @IBOutlet weak var categoriesLabel: UILabel!
     @IBOutlet weak var metadataLabel: UILabel!
@@ -21,6 +22,13 @@ class BlogPostViewController: UIViewController {
         paragraphStyle.lineSpacing = lineHeight
 
         return NSAttributedString(string: fromString, attributes: [NSParagraphStyleAttributeName: paragraphStyle])
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SegueIdentifier.BlogPostByAuthorSegue.rawValue {
+            let destination = segue.destinationViewController as BlogPostByAuthorList
+            destination.author = post.author
+        }
     }
 
     override func viewDidLayoutSubviews() {
@@ -36,8 +44,11 @@ class BlogPostViewController: UIViewController {
 
         addInfoButton()
 
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+
         bodyView.textContainerInset = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 40.0, right: 10.0)
 
+        authorButton.titleLabel?.font = UIFont.bodyTextFont().fontWithSize(12.0)
         categoriesLabel.font = UIFont.bodyTextFont().fontWithSize(12.0)
         categoriesLabel.textColor = UIColor.contentfulDeactivatedColor()
         metadataLabel.font = UIFont.bodyTextFont().fontWithSize(12.0)
@@ -50,11 +61,12 @@ class BlogPostViewController: UIViewController {
         converter.displaySettings.defaultFont = UIFont(name: "PT Serif", size: 15.0)
         bodyView.attributedText = converter.convertDocument(document)
 
+        authorButton.setTitle(post.author.name.uppercaseString, forState: .Normal)
         categoriesLabel.text = String(format:NSLocalizedString("Published under %@", comment: ""), post.category).uppercaseString
         titleLabel.text = post.title
 
         let dateString = NSDateFormatter.customDateFormatter().stringFromDate(post.date)
-        let metadataString = String(format:"%@. by %@", dateString, post.author.name).uppercaseString
+        let metadataString = String(format:"%@. by", dateString).uppercaseString
         metadataLabel.attributedText = attributedString(metadataString, metadataLabel.font.lineHeight * 1.5)
     }
 }

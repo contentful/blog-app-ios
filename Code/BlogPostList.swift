@@ -29,6 +29,7 @@ class BlogPostListCell : UITableViewCell {
 class BlogPostList: UITableViewController {
     var dataManager: ContentfulDataManager? = nil
     var dataSource: CoreDataFetchDataSource? = nil
+    var predicate: String? = nil
 
     func refresh() {
         dataManager?.performSynchronization({ (error) -> Void in
@@ -50,7 +51,7 @@ class BlogPostList: UITableViewController {
 
         dataManager = ContentfulDataManager()
 
-        let controller = dataManager?.fetchedResultsControllerForContentType(ContentfulDataManager.PostContentTypeId, predicate: nil, sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)])
+        let controller = dataManager?.fetchedResultsControllerForContentType(ContentfulDataManager.PostContentTypeId, predicate: predicate, sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)])
         let tableView = self.tableView!
         dataSource = CoreDataFetchDataSource(fetchedResultsController: controller, tableView: tableView, cellIdentifier: NSStringFromClass(BlogPostList.self))
 

@@ -42,12 +42,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15. JAN 2015. BY JACK JOHNSON" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c1-gv-ekQ">
-                                <rect key="frame" x="16" y="62" width="600" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15. JAN 2015. BY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c1-gv-ekQ">
+                                <rect key="frame" x="16" y="62" width="99" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.63529411764705879" green="0.66274509803921566" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFR-qj-5LX">
+                                <rect key="frame" x="120" y="56" width="95" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="JACK JOHNSON">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="b9K-JG-cZd" kind="show" identifier="BlogPostByAuthorSegue" id="mpx-qb-gmA"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-D4-jIe">
                                 <rect key="frame" x="0.0" y="87" width="600" height="410"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,11 +85,13 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
                         <constraints>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="width" relation="lessThanOrEqual" secondItem="LY9-sN-gdc" secondAttribute="width" priority="750" constant="-50" id="0AW-9s-CKS"/>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" priority="750" id="0Q9-gk-Lif"/>
+                            <constraint firstItem="eFR-qj-5LX" firstAttribute="leading" secondItem="6c1-gv-ekQ" secondAttribute="trailing" constant="5" id="3MG-hp-fXH"/>
                             <constraint firstItem="c8Z-kn-FLr" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" id="5xe-z5-lRg"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EKG-Bh-Mwf" secondAttribute="trailing" constant="50" id="AqP-KK-uo8"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="width" secondItem="EKG-Bh-Mwf" secondAttribute="width" id="BXm-YR-L6h"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="top" secondItem="EKG-Bh-Mwf" secondAttribute="bottom" constant="10" id="Bcl-tx-xcu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EKG-Bh-Mwf" secondAttribute="trailing" constant="50" id="Cv1-Tb-i3S"/>
+                            <constraint firstItem="eFR-qj-5LX" firstAttribute="leading" secondItem="6c1-gv-ekQ" secondAttribute="leading" constant="107" id="Kjg-l3-NmN"/>
                             <constraint firstItem="c8Z-kn-FLr" firstAttribute="top" secondItem="wlC-D4-jIe" secondAttribute="bottom" constant="-10" id="Lgx-zz-csg"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="top" secondItem="puU-IV-bmf" secondAttribute="bottom" constant="40" id="OKx-nG-Jok"/>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="TGy-PW-3kQ"/>
@@ -91,6 +103,7 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
                             <constraint firstAttribute="trailingMargin" secondItem="wlC-D4-jIe" secondAttribute="trailing" constant="10" id="nH1-LQ-OB6"/>
                             <constraint firstItem="wlC-D4-jIe" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="nHI-bO-bNw"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" id="xEx-Lk-Fkt"/>
+                            <constraint firstItem="eFR-qj-5LX" firstAttribute="baseline" secondItem="6c1-gv-ekQ" secondAttribute="baseline" id="xQs-6R-nAk"/>
                             <constraint firstItem="wlC-D4-jIe" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leading" id="yKI-TW-uB7"/>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="top" secondItem="puU-IV-bmf" secondAttribute="bottom" constant="10" id="ySu-TZ-V2b"/>
                         </constraints>
@@ -101,13 +114,16 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
                                 <exclude reference="BXm-YR-L6h"/>
                                 <exclude reference="OKx-nG-Jok"/>
                                 <exclude reference="WwC-Lx-AZA"/>
+                                <exclude reference="ZtB-He-CHI"/>
                                 <exclude reference="bqp-dR-A9V"/>
                                 <exclude reference="nH1-LQ-OB6"/>
                                 <exclude reference="nHI-bO-bNw"/>
+                                <exclude reference="Kjg-l3-NmN"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="authorButton" destination="eFR-qj-5LX" id="INU-QN-nb3"/>
                         <outlet property="bodyView" destination="wlC-D4-jIe" id="11D-52-CZ9"/>
                         <outlet property="categoriesLabel" destination="c8Z-kn-FLr" id="dJu-Bx-l3x"/>
                         <outlet property="metadataLabel" destination="6c1-gv-ekQ" id="oX7-tv-5ZP"/>
@@ -117,6 +133,24 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckI-fW-6Wx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1441" y="593"/>
+        </scene>
+        <!--Blog posts-->
+        <scene sceneID="wrC-rd-5zV">
+            <objects>
+                <tableViewController title="Blog posts" id="b9K-JG-cZd" customClass="BlogPostByAuthorList" customModule="Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="veh-8t-QOO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="b9K-JG-cZd" id="5Fg-7p-afj"/>
+                            <outlet property="delegate" destination="b9K-JG-cZd" id="lqp-FJ-aYi"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BPN-eb-T0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="1349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ULd-J0-Sct">
