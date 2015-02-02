@@ -46,13 +46,9 @@ PODS:
 DEPENDENCIES:
   - Bypass
   - ContentfulDialogs
-  - ContentfulPersistence (from `../contentful-persistence.objc`)
+  - ContentfulPersistence
   - ContentfulStyle (HEAD)
   - FBSnapshotTestCase
-
-EXTERNAL SOURCES:
-  ContentfulPersistence:
-    :path: ../contentful-persistence.objc
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
@@ -60,7 +56,7 @@ SPEC CHECKSUMS:
   CGLMail: ba03e1a69db3c27bad925fe1270cd99fada5ed69
   ContentfulDeliveryAPI: 4652d1fb65a08fdfbf01d5e3c399da01409bda00
   ContentfulDialogs: e4a668f43ee864be7275033f8f27e92eeac25261
-  ContentfulPersistence: 5dd17bc760a68e66339c06938e150d5fba6bd66e
+  ContentfulPersistence: 9c7117962b4cf9a069756639d3275ecf7cee0364
   ContentfulStyle: 0f41944b1efd8bba2a8f0c1ac0cf3910b1105949
   DDPageControl: 86d07bda58e325a427fb0d7c8fb650add2ff35c2
   EDColor: bcdb8600b7a456f4408ce1d7e7fc001588919254
