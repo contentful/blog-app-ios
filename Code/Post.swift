@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class Post: NSManagedObject {
+class Post: NSManagedObject, CDAPersistedEntry {
 
     @NSManaged var body: String
     @NSManaged var category: String

@@ -30,8 +30,7 @@ class AuthorViewController: UIViewController {
         numberOfPostLabel.font = UIFont.bodyTextFont()
 
         authorBio.text = author.biography
-        // TODO: Currently blocked by @NSManaged bug which doesn't support Protocol properties
-        //authorImage.cda_setImageWithPersistedAsset(author.profilePhoto, client: client, size: authorImage.frame.size, placeholderImage: nil)
+        authorImage.cda_setImageWithPersistedAsset(author.profilePhoto, client: client, size: authorImage.frame.size, placeholderImage: nil)
         authorName.text = author.name
     }
 }

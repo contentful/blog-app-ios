@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class Asset: NSManagedObject {
+class Asset: NSManagedObject, CDAPersistedAsset {
 
     @NSManaged var height: NSNumber
     @NSManaged var identifier: String

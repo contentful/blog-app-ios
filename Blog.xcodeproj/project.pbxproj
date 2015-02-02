@@ -28,6 +28,7 @@
 		A1BE2AE91A72512800FC53EC /* BlogPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE2AE81A72512800FC53EC /* BlogPostViewController.swift */; };
 		A1FFCEF01A7FB111002F82A6 /* BlogPostByAuthorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FFCEEF1A7FB111002F82A6 /* BlogPostByAuthorList.swift */; };
 		A1FFCEF21A7FCCEA002F82A6 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FFCEF11A7FCCEA002F82A6 /* AuthorViewController.swift */; };
+		A1FFCF281A8005A5002F82A6 /* Hack.c in Sources */ = {isa = PBXBuildFile; fileRef = A1FFCF261A8005A5002F82A6 /* Hack.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A1BE2AE81A72512800FC53EC /* BlogPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostViewController.swift; sourceTree = "<group>"; };
 		A1FFCEEF1A7FB111002F82A6 /* BlogPostByAuthorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostByAuthorList.swift; sourceTree = "<group>"; };
 		A1FFCEF11A7FCCEA002F82A6 /* AuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
+		A1FFCF261A8005A5002F82A6 /* Hack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Hack.c; sourceTree = "<group>"; };
 		AD298FB237962F621B116880 /* libPods-Blog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Blog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28EBF7B59D270CF1DEFB976 /* Pods-Blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blog/Pods-Blog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				A1A6D3D41A719BB100B08959 /* BridgingHeader.h */,
+				A1FFCF261A8005A5002F82A6 /* Hack.c */,
 				A1B954AF1A70FE6800B4F200 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -379,6 +382,7 @@
 				A1B68C811A792840001A5A0D /* UIViewController-Extensions.swift in Sources */,
 				A1A6D3D31A719AF300B08959 /* ContentfulDataManager.swift in Sources */,
 				A1B954B11A70FE6800B4F200 /* AppDelegate.swift in Sources */,
+				A1FFCF281A8005A5002F82A6 /* Hack.c in Sources */,
 				A1FFCEF01A7FB111002F82A6 /* BlogPostByAuthorList.swift in Sources */,
 				A1FFCEF21A7FCCEA002F82A6 /* AuthorViewController.swift in Sources */,
 				A1B68C7D1A791684001A5A0D /* CustomDateFormatter.swift in Sources */,

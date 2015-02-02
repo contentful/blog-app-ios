@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class Author: NSManagedObject {
+class Author: NSManagedObject, CDAPersistedEntry {
 
     @NSManaged var biography: String
     @NSManaged var identifier: String
