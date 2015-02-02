@@ -59,6 +59,7 @@ class BlogPostList: UITableViewController {
                 tcell.accessoryType = .DisclosureIndicator
                 tcell.detailTextLabel?.font = UIFont.bodyTextFont().fontWithSize(12.0)
                 tcell.detailTextLabel?.textColor = UIColor.contentfulDeactivatedColor()
+                tcell.selectionStyle = .None
                 tcell.textLabel?.font = UIFont.titleBarFont()
                 tcell.textLabel?.numberOfLines = 2
 
