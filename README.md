@@ -1,4 +1,4 @@
-# Product Catalogue
+# Blog
 
 This is an iOS application example for the [Contentful][1] blog space template.
 
