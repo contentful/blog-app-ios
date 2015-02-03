@@ -40,5 +40,20 @@
 	<array>
 		<string>PT_Serif-Web-Regular.ttf</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLIconFile</key>
+			<string>512_black.png</string>
+			<key>CFBundleURLName</key>
+			<string>com.contentful.blog</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>contentful-blog</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

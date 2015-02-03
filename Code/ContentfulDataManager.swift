@@ -14,6 +14,13 @@ class ContentfulDataManager: NSObject {
 
     var client: CDAClient { return manager.client }
     var manager: CoreDataManager
+    var notificationToken: NSObjectProtocol? = nil
+
+    deinit {
+        if let token = self.notificationToken {
+            NSNotificationCenter.defaultCenter().removeObserver(token)
+        }
+    }
 
     func fetchedResultsControllerForContentType(identifier: String, predicate: String?, sortDescriptors: [NSSortDescriptor]) -> NSFetchedResultsController {
         let fetchRequest = manager.fetchRequestForEntriesOfContentTypeWithIdentifier(identifier, matchingPredicate: predicate)
@@ -33,6 +40,19 @@ class ContentfulDataManager: NSObject {
         manager.setClass(Author.self, forEntriesOfContentTypeWithIdentifier: ContentfulDataManager.AuthorContentTypeId)
 
         super.init()
+
+        notificationToken = NSNotificationCenter.defaultCenter().addObserverForName(AppDelegate.SpaceChangedNotification, object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { [unowned self] (note: NSNotification?) -> Void in
+            if let note = note {
+                self.manager.deleteAll()
+
+                let defaults = NSUserDefaults.standardUserDefaults()
+                defaults.setValue(note.userInfo![AppDelegate.SpaceKey], forKey: AppDelegate.SpaceKey)
+                defaults.setValue(note.userInfo![AppDelegate.AccessToken], forKey: AppDelegate.AccessToken)
+
+                let keyWindow = UIApplication.sharedApplication().keyWindow!
+                keyWindow.rootViewController = keyWindow.rootViewController?.storyboard?.instantiateInitialViewController() as? UIViewController
+            }
+        })
     }
 
     func performSynchronization(completion: (NSError!) -> Void) {
