@@ -11,11 +11,11 @@ import CoreData
 
 class Author: NSManagedObject, CDAPersistedEntry {
 
-    @NSManaged var biography: String
+    @NSManaged var biography: String?
     @NSManaged var identifier: String
     @NSManaged var name: String
-    @NSManaged var website: String
+    @NSManaged var website: String?
     @NSManaged var createdEntries: NSOrderedSet
-    @NSManaged var profilePhoto: Asset
+    @NSManaged var profilePhoto: Asset?
 
 }

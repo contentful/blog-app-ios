@@ -11,14 +11,14 @@ import CoreData
 
 class Post: NSManagedObject, CDAPersistedEntry {
 
-    @NSManaged var body: String
-    @NSManaged var category: String
-    @NSManaged var comments: NSNumber
-    @NSManaged var date: NSDate
+    @NSManaged var body: String?
+    @NSManaged var category: String?
+    @NSManaged var comments: NSNumber?
+    @NSManaged var date: NSDate?
     @NSManaged var identifier: String
-    @NSManaged var slug: String
+    @NSManaged var slug: String?
     @NSManaged var title: String
-    @NSManaged var author: Author
-    @NSManaged var featuredImage: Asset
+    @NSManaged var author: Author?
+    @NSManaged var featuredImage: Asset?
 
 }

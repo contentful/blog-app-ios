@@ -72,8 +72,10 @@ class BlogPostList: UITableViewController {
                 if let post = self.dataSource?.objectAtIndexPath(indexPath) as? Post {
                     tcell.textLabel?.text = post.title
 
-                    let dateString = NSDateFormatter.customDateFormatter().stringFromDate(post.date)
-                    tcell.detailTextLabel?.text = String(format:"%@. by %@", dateString, post.author.name).uppercaseString
+                    if let date = post.date {
+                        let dateString = NSDateFormatter.customDateFormatter().stringFromDate(date)
+                        tcell.detailTextLabel?.text = String(format:"%@. by %@", dateString, post.author != nil ? post.author!.name : NSLocalizedString("Unknown", comment: "Unknown author")).uppercaseString
+                    }
                 }
             }
         }

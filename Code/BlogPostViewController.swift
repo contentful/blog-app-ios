@@ -61,12 +61,19 @@ class BlogPostViewController: UIViewController {
         converter.displaySettings.defaultFont = UIFont(name: "PT Serif", size: 15.0)
         bodyView.attributedText = converter.convertDocument(document)
 
-        authorButton.setTitle(post.author.name.uppercaseString, forState: .Normal)
-        categoriesLabel.text = String(format:NSLocalizedString("Published under %@", comment: ""), post.category).uppercaseString
+        if let author = post.author {
+            authorButton.setTitle(author.name.uppercaseString, forState: .Normal)
+        } else {
+            authorButton.enabled = false
+        }
+
+        categoriesLabel.text = String(format:NSLocalizedString("Published under %@", comment: ""), post.category != nil ? post.category! : "").uppercaseString
         titleLabel.text = post.title
 
-        let dateString = NSDateFormatter.customDateFormatter().stringFromDate(post.date)
-        let metadataString = String(format:"%@. by", dateString).uppercaseString
-        metadataLabel.attributedText = attributedString(metadataString, metadataLabel.font.lineHeight * 1.5)
+        if let date = post.date {
+            let dateString = NSDateFormatter.customDateFormatter().stringFromDate(date)
+            let metadataString = String(format:"%@. by", dateString).uppercaseString
+            metadataLabel.attributedText = attributedString(metadataString, metadataLabel.font.lineHeight * 1.5)
+        }
     }
 }
