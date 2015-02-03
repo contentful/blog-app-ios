@@ -35,31 +35,3 @@ Copyright (c) 2015 Contentful GmbH. See LICENSE for further details.
 
 [1]: https://www.contentful.com
 [2]: http://cocoapods.org
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-This is an iOS application example for the [Contentful][1] blog
-space template.
-
-[1]: https://www.contentful.com
