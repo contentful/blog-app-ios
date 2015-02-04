@@ -21,6 +21,8 @@ class BlogPostByAuthorList: BlogPostList {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        showsAuthor = false
+
         tableView.contentInset = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 0.0, right: 0.0)
 
         authorViewController = storyboard?.instantiateViewControllerWithIdentifier(ViewControllerStoryboardIdentifier.AuthorViewControllerId.rawValue) as AuthorViewController

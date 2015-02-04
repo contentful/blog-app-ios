@@ -30,6 +30,7 @@ class BlogPostList: UITableViewController {
     var dataManager: ContentfulDataManager? = nil
     var dataSource: CoreDataFetchDataSource? = nil
     var predicate: String? = nil
+    var showsAuthor: Bool = true
 
     func refresh() {
         dataManager?.performSynchronization({ (error) -> Void in
@@ -73,8 +74,9 @@ class BlogPostList: UITableViewController {
                     tcell.textLabel?.text = post.title
 
                     if let date = post.date {
+                        let authorString = String(format:"by %@", post.author != nil ? post.author!.name : NSLocalizedString("Unknown", comment: "Unknown author"))
                         let dateString = NSDateFormatter.customDateFormatter().stringFromDate(date)
-                        tcell.detailTextLabel?.text = String(format:"%@. by %@", dateString, post.author != nil ? post.author!.name : NSLocalizedString("Unknown", comment: "Unknown author")).uppercaseString
+                        tcell.detailTextLabel?.text = String(format:"%@. %@", dateString.uppercaseString, self.showsAuthor ? authorString : "")
                     }
                 }
             }
