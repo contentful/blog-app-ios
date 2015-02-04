@@ -12,9 +12,11 @@ class BlogPostViewController: UIViewController {
     @IBOutlet weak var authorButton: UIButton!
     @IBOutlet weak var bodyView: UITextView!
     @IBOutlet weak var categoriesLabel: UILabel!
+    @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var metadataLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
 
+    weak var client: CDAClient!
     weak var post: Post!
 
     func attributedString(fromString: String, _ lineHeight: CGFloat) -> NSAttributedString {
@@ -47,6 +49,9 @@ class BlogPostViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
 
         bodyView.textContainerInset = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 40.0, right: 10.0)
+
+        coverImageView.offlineCaching_cda = true
+        coverImageView.cda_setImageWithPersistedAsset(post.featuredImage, client: client, size: coverImageView.frame.size, placeholderImage: nil)
 
         authorButton.titleLabel?.font = UIFont.bodyTextFont().fontWithSize(12.0)
         categoriesLabel.font = UIFont.bodyTextFont().fontWithSize(12.0)

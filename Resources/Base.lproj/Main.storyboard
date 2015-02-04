@@ -36,20 +36,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c93-no-r8N" userLabel="Cover Image">
+                                <rect key="frame" x="-2" y="20" width="600" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ige-1M-hQh"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The best of Obama's State of the Union address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKG-Bh-Mwf">
-                                <rect key="frame" x="16" y="30" width="401" height="22"/>
+                                <rect key="frame" x="16" y="180" width="401" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15. JAN 2015. BY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c1-gv-ekQ">
-                                <rect key="frame" x="16" y="62" width="99" height="15"/>
+                                <rect key="frame" x="16" y="212" width="99" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.63529411764705879" green="0.66274509803921566" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFR-qj-5LX">
-                                <rect key="frame" x="120" y="56" width="95" height="27"/>
+                                <rect key="frame" x="120" y="206" width="95" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="JACK JOHNSON">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,9 +65,9 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-D4-jIe">
-                                <rect key="frame" x="0.0" y="87" width="600" height="410"/>
+                                <rect key="frame" x="0.0" y="237" width="600" height="357"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
+                                <mutableString key="text">The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
 
 The first part of the plan would raise taxes on capital gains — money made through investments — for high-income earners and on inherited wealth. Both changes are meant to target the richest U.S. citizens. Another part of the plan raises taxes on large financial institutions.
 
@@ -69,13 +75,12 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
 
 The first part of the plan would raise taxes on capital gains — money made through investments — for high-income earners and on inherited wealth. Both changes are meant to target the richest U.S. citizens. Another part of the plan raises taxes on large financial institutions.
 
-The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
-</string>
+</mutableString>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUBLISHED UNDER #OBAMA #USA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8Z-kn-FLr">
-                                <rect key="frame" x="16" y="487" width="205" height="15"/>
+                                <rect key="frame" x="16" y="584" width="205" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.63529411759999999" green="0.66274509800000003" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -90,9 +95,11 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EKG-Bh-Mwf" secondAttribute="trailing" constant="50" id="AqP-KK-uo8"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="width" secondItem="EKG-Bh-Mwf" secondAttribute="width" id="BXm-YR-L6h"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="top" secondItem="EKG-Bh-Mwf" secondAttribute="bottom" constant="10" id="Bcl-tx-xcu"/>
+                            <constraint firstItem="puU-IV-bmf" firstAttribute="top" secondItem="c93-no-r8N" secondAttribute="top" id="BxU-hK-MjA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EKG-Bh-Mwf" secondAttribute="trailing" constant="50" id="Cv1-Tb-i3S"/>
                             <constraint firstItem="eFR-qj-5LX" firstAttribute="leading" secondItem="6c1-gv-ekQ" secondAttribute="leading" constant="107" id="Kjg-l3-NmN"/>
                             <constraint firstItem="c8Z-kn-FLr" firstAttribute="top" secondItem="wlC-D4-jIe" secondAttribute="bottom" constant="-10" id="Lgx-zz-csg"/>
+                            <constraint firstItem="c93-no-r8N" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="-18" id="MBp-gr-ln8"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="top" secondItem="puU-IV-bmf" secondAttribute="bottom" constant="40" id="OKx-nG-Jok"/>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="TGy-PW-3kQ"/>
                             <constraint firstAttribute="width" secondItem="wlC-D4-jIe" secondAttribute="width" id="VuH-LP-Ud0"/>
@@ -102,6 +109,8 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
                             <constraint firstItem="wlC-D4-jIe" firstAttribute="top" secondItem="6c1-gv-ekQ" secondAttribute="bottom" constant="10" id="mzu-Gc-3yf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wlC-D4-jIe" secondAttribute="trailing" constant="10" id="nH1-LQ-OB6"/>
                             <constraint firstItem="wlC-D4-jIe" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="nHI-bO-bNw"/>
+                            <constraint firstItem="c93-no-r8N" firstAttribute="bottom" secondItem="EKG-Bh-Mwf" secondAttribute="top" constant="-10" id="pYM-k9-2Vj"/>
+                            <constraint firstAttribute="width" secondItem="c93-no-r8N" secondAttribute="width" id="sM2-G1-qy3"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" id="xEx-Lk-Fkt"/>
                             <constraint firstItem="eFR-qj-5LX" firstAttribute="baseline" secondItem="6c1-gv-ekQ" secondAttribute="baseline" id="xQs-6R-nAk"/>
                             <constraint firstItem="wlC-D4-jIe" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leading" id="yKI-TW-uB7"/>
@@ -111,6 +120,7 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
                             <mask key="constraints">
                                 <exclude reference="Cv1-Tb-i3S"/>
                                 <exclude reference="TGy-PW-3kQ"/>
+                                <exclude reference="ySu-TZ-V2b"/>
                                 <exclude reference="BXm-YR-L6h"/>
                                 <exclude reference="OKx-nG-Jok"/>
                                 <exclude reference="WwC-Lx-AZA"/>
@@ -122,10 +132,12 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="authorButton" destination="eFR-qj-5LX" id="INU-QN-nb3"/>
                         <outlet property="bodyView" destination="wlC-D4-jIe" id="11D-52-CZ9"/>
                         <outlet property="categoriesLabel" destination="c8Z-kn-FLr" id="dJu-Bx-l3x"/>
+                        <outlet property="coverImageView" destination="c93-no-r8N" id="tQD-Fm-rKg"/>
                         <outlet property="metadataLabel" destination="6c1-gv-ekQ" id="oX7-tv-5ZP"/>
                         <outlet property="titleLabel" destination="EKG-Bh-Mwf" id="qdi-6I-bbS"/>
                     </connections>

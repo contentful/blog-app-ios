@@ -30,6 +30,7 @@ class AuthorViewController: UIViewController {
         numberOfPostLabel.font = UIFont.bodyTextFont()
 
         authorBio.text = author.biography
+        authorImage.offlineCaching_cda = true
         authorImage.cda_setImageWithPersistedAsset(author.profilePhoto, client: client, size: authorImage.frame.size, placeholderImage: nil)
         authorName.text = author.name
     }

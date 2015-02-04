@@ -99,6 +99,7 @@ class BlogPostList: UITableViewController {
         if let post = self.dataSource?.objectAtIndexPath(indexPath) as? Post {
             let identifier = ViewControllerStoryboardIdentifier.BlogPostViewControllerId.rawValue
             let blogPostViewController = storyboard?.instantiateViewControllerWithIdentifier(identifier) as? BlogPostViewController
+            blogPostViewController?.client = dataManager?.client
             blogPostViewController?.post = post
 
             navigationController?.pushViewController(blogPostViewController!, animated: true)
