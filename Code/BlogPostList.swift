@@ -27,10 +27,10 @@ class BlogPostListCell : UITableViewCell {
 }
 
 class BlogPostList: UITableViewController {
-    var dataManager: ContentfulDataManager? = nil
-    var dataSource: CoreDataFetchDataSource? = nil
-    var metadataViewController: PostListMetadataViewController! = nil
-    var predicate: String? = nil
+    var dataManager: ContentfulDataManager?
+    var dataSource: CoreDataFetchDataSource?
+    var metadataViewController: PostListMetadataViewController!
+    var predicate: String?
     var showsAuthor: Bool = true
 
     func refresh() {

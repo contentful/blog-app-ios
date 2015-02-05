@@ -12,18 +12,14 @@ class ScrollableButtonBar: UIViewController {
     var tapHandler: ((tappedObject: AnyObject) -> (Void))?
     var titleKey = "title"
 
-    private var _objects: NSArray = []
-    var objects: NSArray {
-        get { return _objects }
-        set {
-            _objects = newValue
-
+    var objects: NSArray = [] {
+        didSet {
             let scrollView = UIScrollView(frame: view.bounds)
             scrollView.autoresizingMask = .FlexibleWidth
             view.addSubview(scrollView)
 
             var x = CGFloat(0.0), maxHeight = CGFloat(0.0)
-            for (index, object) in enumerate(_objects) {
+            for (index, object) in enumerate(objects) {
                 let button = UIButton.buttonWithType(.System) as UIButton
                 button.addTarget(self, action: "tapped:", forControlEvents: .TouchUpInside)
                 button.frame.origin.x = x
