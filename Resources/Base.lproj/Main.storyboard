@@ -54,20 +54,19 @@
                                 <color key="textColor" red="0.63529411764705879" green="0.66274509803921566" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFR-qj-5LX">
-                                <rect key="frame" x="120" y="206" width="95" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="JACK JOHNSON">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iB4-bC-dTx" userLabel="Authors Bar">
+                                <rect key="frame" x="125" y="206" width="439" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="FMd-GB-H3T"/>
+                                </constraints>
                                 <connections>
-                                    <segue destination="b9K-JG-cZd" kind="show" identifier="BlogPostByAuthorSegue" id="mpx-qb-gmA"/>
+                                    <segue destination="cje-vU-2BD" kind="embed" identifier="EmbedAuthorsBarSegue" id="dqB-SK-jKw"/>
                                 </connections>
-                            </button>
+                            </containerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-D4-jIe">
                                 <rect key="frame" x="0.0" y="237" width="600" height="357"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
+                                <string key="text">The president’s tax proposal seeks to raise taxes on the upper class while easing them on those with moderate incomes. His plan comes as economists debate the growing wealth gap in the U.S. and abroad.
 
 The first part of the plan would raise taxes on capital gains — money made through investments — for high-income earners and on inherited wealth. Both changes are meant to target the richest U.S. citizens. Another part of the plan raises taxes on large financial institutions.
 
@@ -75,35 +74,50 @@ The president’s tax proposal seeks to raise taxes on the upper class while eas
 
 The first part of the plan would raise taxes on capital gains — money made through investments — for high-income earners and on inherited wealth. Both changes are meant to target the richest U.S. citizens. Another part of the plan raises taxes on large financial institutions.
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUBLISHED UNDER #OBAMA #USA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8Z-kn-FLr">
-                                <rect key="frame" x="16" y="584" width="205" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUBLISHED UNDER " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8Z-kn-FLr">
+                                <rect key="frame" x="16" y="584" width="119" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.63529411759999999" green="0.66274509800000003" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNl-ay-ckU" userLabel="Categories Bar">
+                                <rect key="frame" x="145" y="578" width="419" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="PD4-Cf-Ps9"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="adt-at-9Vj" kind="embed" identifier="EmbedCategoriesBarSegue" id="Vgl-dj-S8L"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="width" relation="lessThanOrEqual" secondItem="LY9-sN-gdc" secondAttribute="width" priority="750" constant="-50" id="0AW-9s-CKS"/>
+                            <constraint firstItem="iB4-bC-dTx" firstAttribute="centerY" secondItem="6c1-gv-ekQ" secondAttribute="centerY" id="0Hs-ko-QfC"/>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" priority="750" id="0Q9-gk-Lif"/>
-                            <constraint firstItem="eFR-qj-5LX" firstAttribute="leading" secondItem="6c1-gv-ekQ" secondAttribute="trailing" constant="5" id="3MG-hp-fXH"/>
                             <constraint firstItem="c8Z-kn-FLr" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" id="5xe-z5-lRg"/>
+                            <constraint firstItem="iB4-bC-dTx" firstAttribute="leading" secondItem="6c1-gv-ekQ" secondAttribute="trailing" constant="10" id="7n8-YG-fEQ"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EKG-Bh-Mwf" secondAttribute="trailing" constant="50" id="AqP-KK-uo8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JNl-ay-ckU" secondAttribute="trailing" constant="20" id="Aqr-jp-qdF"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="width" secondItem="EKG-Bh-Mwf" secondAttribute="width" id="BXm-YR-L6h"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="top" secondItem="EKG-Bh-Mwf" secondAttribute="bottom" constant="10" id="Bcl-tx-xcu"/>
                             <constraint firstItem="puU-IV-bmf" firstAttribute="top" secondItem="c93-no-r8N" secondAttribute="top" id="BxU-hK-MjA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EKG-Bh-Mwf" secondAttribute="trailing" constant="50" id="Cv1-Tb-i3S"/>
-                            <constraint firstItem="eFR-qj-5LX" firstAttribute="leading" secondItem="6c1-gv-ekQ" secondAttribute="leading" constant="107" id="Kjg-l3-NmN"/>
                             <constraint firstItem="c8Z-kn-FLr" firstAttribute="top" secondItem="wlC-D4-jIe" secondAttribute="bottom" constant="-10" id="Lgx-zz-csg"/>
                             <constraint firstItem="c93-no-r8N" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="-18" id="MBp-gr-ln8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iB4-bC-dTx" secondAttribute="trailing" constant="20" id="MUJ-6Z-VGe"/>
+                            <constraint firstItem="iB4-bC-dTx" firstAttribute="leading" secondItem="6c1-gv-ekQ" secondAttribute="leading" constant="10" id="Mim-In-4Hs"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="top" secondItem="puU-IV-bmf" secondAttribute="bottom" constant="40" id="OKx-nG-Jok"/>
+                            <constraint firstItem="c8Z-kn-FLr" firstAttribute="top" secondItem="JNl-ay-ckU" secondAttribute="bottom" constant="-45" id="Onk-Kt-EzT"/>
+                            <constraint firstItem="c8Z-kn-FLr" firstAttribute="centerY" secondItem="JNl-ay-ckU" secondAttribute="centerY" id="Qbn-nF-DnN"/>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="TGy-PW-3kQ"/>
                             <constraint firstAttribute="width" secondItem="wlC-D4-jIe" secondAttribute="width" id="VuH-LP-Ud0"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="width" secondItem="EKG-Bh-Mwf" secondAttribute="width" id="WwC-Lx-AZA"/>
+                            <constraint firstItem="c8Z-kn-FLr" firstAttribute="top" secondItem="JNl-ay-ckU" secondAttribute="bottom" constant="8" symbolic="YES" id="ZMc-J3-lad"/>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="6c1-gv-ekQ" secondAttribute="width" id="ZtB-He-CHI"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="bqp-dR-A9V"/>
                             <constraint firstItem="wlC-D4-jIe" firstAttribute="top" secondItem="6c1-gv-ekQ" secondAttribute="bottom" constant="10" id="mzu-Gc-3yf"/>
@@ -111,10 +125,11 @@ The first part of the plan would raise taxes on capital gains — money made thr
                             <constraint firstItem="wlC-D4-jIe" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" constant="10" id="nHI-bO-bNw"/>
                             <constraint firstItem="c93-no-r8N" firstAttribute="bottom" secondItem="EKG-Bh-Mwf" secondAttribute="top" constant="-10" id="pYM-k9-2Vj"/>
                             <constraint firstAttribute="width" secondItem="c93-no-r8N" secondAttribute="width" id="sM2-G1-qy3"/>
+                            <constraint firstItem="JNl-ay-ckU" firstAttribute="leading" secondItem="c8Z-kn-FLr" secondAttribute="trailing" constant="10" id="vrU-bS-8uh"/>
                             <constraint firstItem="6c1-gv-ekQ" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leadingMargin" id="xEx-Lk-Fkt"/>
-                            <constraint firstItem="eFR-qj-5LX" firstAttribute="baseline" secondItem="6c1-gv-ekQ" secondAttribute="baseline" id="xQs-6R-nAk"/>
                             <constraint firstItem="wlC-D4-jIe" firstAttribute="leading" secondItem="LY9-sN-gdc" secondAttribute="leading" id="yKI-TW-uB7"/>
                             <constraint firstItem="EKG-Bh-Mwf" firstAttribute="top" secondItem="puU-IV-bmf" secondAttribute="bottom" constant="10" id="ySu-TZ-V2b"/>
+                            <constraint firstItem="iB4-bC-dTx" firstAttribute="height" secondItem="6c1-gv-ekQ" secondAttribute="height" id="zQN-Nw-wpl"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -128,18 +143,21 @@ The first part of the plan would raise taxes on capital gains — money made thr
                                 <exclude reference="bqp-dR-A9V"/>
                                 <exclude reference="nH1-LQ-OB6"/>
                                 <exclude reference="nHI-bO-bNw"/>
-                                <exclude reference="Kjg-l3-NmN"/>
+                                <exclude reference="Mim-In-4Hs"/>
+                                <exclude reference="zQN-Nw-wpl"/>
+                                <exclude reference="Onk-Kt-EzT"/>
+                                <exclude reference="ZMc-J3-lad"/>
                             </mask>
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
-                        <outlet property="authorButton" destination="eFR-qj-5LX" id="INU-QN-nb3"/>
                         <outlet property="bodyView" destination="wlC-D4-jIe" id="11D-52-CZ9"/>
                         <outlet property="categoriesLabel" destination="c8Z-kn-FLr" id="dJu-Bx-l3x"/>
                         <outlet property="coverImageView" destination="c93-no-r8N" id="tQD-Fm-rKg"/>
                         <outlet property="metadataLabel" destination="6c1-gv-ekQ" id="oX7-tv-5ZP"/>
                         <outlet property="titleLabel" destination="EKG-Bh-Mwf" id="qdi-6I-bbS"/>
+                        <segue destination="b9K-JG-cZd" kind="show" identifier="BlogPostByAuthorSegue" id="WnJ-vi-U4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckI-fW-6Wx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -271,6 +289,44 @@ The first part of the plan would raise taxes on capital gains — money made thr
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBC-Ko-tnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-25" y="594"/>
+        </scene>
+        <!--Scrollable Button Bar-->
+        <scene sceneID="Gvh-Mf-hMj">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cje-vU-2BD" customClass="ScrollableButtonBar" customModule="Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VJj-8y-soD"/>
+                        <viewControllerLayoutGuide type="bottom" id="w0x-Rm-rcs"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="O6h-1G-gC9">
+                        <rect key="frame" x="0.0" y="0.0" width="439" height="27"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rss-iR-fYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2072.5" y="495.5"/>
+        </scene>
+        <!--Scrollable Button Bar-->
+        <scene sceneID="Z8d-O8-1is">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="adt-at-9Vj" customClass="ScrollableButtonBar" customModule="Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E6Y-RH-OZm"/>
+                        <viewControllerLayoutGuide type="bottom" id="5yr-5S-Bdp"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="f1s-QC-ze5">
+                        <rect key="frame" x="0.0" y="0.0" width="419" height="27"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjT-LS-g5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2062.5" y="703.5"/>
         </scene>
     </scenes>
 </document>

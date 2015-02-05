@@ -9,7 +9,6 @@
 import UIKit
 
 class BlogPostViewController: UIViewController {
-    @IBOutlet weak var authorButton: UIButton!
     @IBOutlet weak var bodyView: UITextView!
     @IBOutlet weak var categoriesLabel: UILabel!
     @IBOutlet weak var coverImageView: UIImageView!
@@ -29,7 +28,26 @@ class BlogPostViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == SegueIdentifier.BlogPostByAuthorSegue.rawValue {
             let destination = segue.destinationViewController as BlogPostByAuthorList
-            destination.author = post.author
+            destination.author = sender as Author
+        }
+
+        if segue.identifier == SegueIdentifier.EmbedAuthorsBarSegue.rawValue {
+            if let authors = post.author {
+                let destination = segue.destinationViewController as ScrollableButtonBar
+                destination.titleKey = "name"
+                destination.objects = authors.array
+
+                destination.tapHandler = { (object: AnyObject) -> Void in
+                    self.performSegueWithIdentifier(SegueIdentifier.BlogPostByAuthorSegue.rawValue, sender: object as Author)
+                }
+            }
+        }
+
+        if segue.identifier == SegueIdentifier.EmbedCategoriesBarSegue.rawValue {
+            if let categories = post.category {
+                let destination = segue.destinationViewController as ScrollableButtonBar
+                destination.objects = categories.array
+            }
         }
     }
 
@@ -38,7 +56,7 @@ class BlogPostViewController: UIViewController {
 
         let scrollView = view as UIScrollView
         scrollView.contentSize = CGSize(width: scrollView.frame.size.width,
-            height: bodyView.frame.origin.y + bodyView.intrinsicContentSize().height + categoriesLabel.intrinsicContentSize().height)
+            height: bodyView.frame.origin.y + bodyView.intrinsicContentSize().height + categoriesLabel.intrinsicContentSize().height + 10.0)
     }
 
     override func viewDidLoad() {
@@ -53,7 +71,6 @@ class BlogPostViewController: UIViewController {
         coverImageView.offlineCaching_cda = true
         coverImageView.cda_setImageWithPersistedAsset(post.featuredImage, client: client, size: coverImageView.frame.size, placeholderImage: nil)
 
-        authorButton.titleLabel?.font = UIFont.bodyTextFont().fontWithSize(12.0)
         categoriesLabel.font = UIFont.bodyTextFont().fontWithSize(12.0)
         categoriesLabel.textColor = UIColor.contentfulDeactivatedColor()
         metadataLabel.font = UIFont.bodyTextFont().fontWithSize(12.0)
@@ -66,13 +83,6 @@ class BlogPostViewController: UIViewController {
         converter.displaySettings.defaultFont = UIFont(name: "PT Serif", size: 15.0)
         bodyView.attributedText = converter.convertDocument(document)
 
-        if let author = post.author {
-            authorButton.setTitle(author.name.uppercaseString, forState: .Normal)
-        } else {
-            authorButton.enabled = false
-        }
-
-        categoriesLabel.text = String(format:NSLocalizedString("Published under %@", comment: ""), post.category != nil ? post.category! : "").uppercaseString
         titleLabel.text = post.title
 
         if let date = post.date {

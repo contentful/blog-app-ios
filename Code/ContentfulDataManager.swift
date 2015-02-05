@@ -10,7 +10,8 @@ import UIKit
 
 class ContentfulDataManager: NSObject {
     class var AuthorContentTypeId: String { return "1kUEViTN4EmGiEaaeC6ouY" }
-    class var PostContentTypeId: String { return "32D46deE6kkWUYaEk2mAOe" }
+    class var CategoryContentTypeId: String { return "5KMiN6YPvi42icqAUQMCQe" }
+    class var PostContentTypeId: String { return "2wKn6yEnZewu2SCCkus4as" }
 
     var client: CDAClient { return manager.client }
     var manager: CoreDataManager
@@ -38,6 +39,9 @@ class ContentfulDataManager: NSObject {
 
         manager.setClass(Post.self, forEntriesOfContentTypeWithIdentifier: ContentfulDataManager.PostContentTypeId)
         manager.setClass(Author.self, forEntriesOfContentTypeWithIdentifier: ContentfulDataManager.AuthorContentTypeId)
+        manager.setClass(Category.self, forEntriesOfContentTypeWithIdentifier: ContentfulDataManager.CategoryContentTypeId)
+
+        manager.setMapping([ "fields.title": "title", "fields.icon": "icon", "fields.shortDescription": "categoryDescription" ], forEntriesOfContentTypeWithIdentifier: ContentfulDataManager.CategoryContentTypeId)
 
         super.init()
 

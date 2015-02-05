@@ -15,7 +15,7 @@ class Author: NSManagedObject, CDAPersistedEntry {
     @NSManaged var identifier: String
     @NSManaged var name: String
     @NSManaged var website: String?
-    @NSManaged var createdEntries: NSOrderedSet
+    @NSManaged var createdEntries: NSOrderedSet?
     @NSManaged var profilePhoto: Asset?
 
 }

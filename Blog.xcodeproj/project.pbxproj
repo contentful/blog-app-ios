@@ -10,6 +10,8 @@
 		52968236F8CD73124D89E118 /* libPods-Blog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD298FB237962F621B116880 /* libPods-Blog.a */; };
 		6009A91F1C1749982E9C5660 /* libPods-BlogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FF5C8D95A9C7B5D6F09090 /* libPods-BlogTests.a */; };
 		A11232651A71BB5D0055C330 /* StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11232641A71BB5D0055C330 /* StoryboardIdentifiers.swift */; };
+		A18192D61A8396FF005F95F3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18192D51A8396FF005F95F3 /* Category.swift */; };
+		A18192D81A83A500005F95F3 /* ScrollableButtonBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18192D71A83A500005F95F3 /* ScrollableButtonBar.swift */; };
 		A1A6D3BB1A71962F00B08959 /* Blog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1A6D3B91A71962F00B08959 /* Blog.xcdatamodeld */; };
 		A1A6D3CB1A7196E300B08959 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6D3CA1A7196E300B08959 /* Author.swift */; };
 		A1A6D3CD1A7196E400B08959 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6D3CC1A7196E400B08959 /* Post.swift */; };
@@ -47,6 +49,8 @@
 		619D6FAD7D6B152E47266A18 /* Pods-BlogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlogTests/Pods-BlogTests.release.xcconfig"; sourceTree = "<group>"; };
 		A0FF5C8D95A9C7B5D6F09090 /* libPods-BlogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11232641A71BB5D0055C330 /* StoryboardIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiers.swift; sourceTree = "<group>"; };
+		A18192D51A8396FF005F95F3 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A18192D71A83A500005F95F3 /* ScrollableButtonBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableButtonBar.swift; sourceTree = "<group>"; };
 		A1A6D3BA1A71962F00B08959 /* Blog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blog.xcdatamodel; sourceTree = "<group>"; };
 		A1A6D3CA1A7196E300B08959 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Author.swift; path = Code/Author.swift; sourceTree = SOURCE_ROOT; };
 		A1A6D3CC1A7196E400B08959 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Code/Post.swift; sourceTree = SOURCE_ROOT; };
@@ -119,6 +123,7 @@
 			children = (
 				A1A6D3D01A7196E400B08959 /* Asset.swift */,
 				A1A6D3CA1A7196E300B08959 /* Author.swift */,
+				A18192D51A8396FF005F95F3 /* Category.swift */,
 				A1A6D3CC1A7196E400B08959 /* Post.swift */,
 				A1A6D3CE1A7196E400B08959 /* SyncInfo.swift */,
 			);
@@ -159,6 +164,7 @@
 				A1BE2AE81A72512800FC53EC /* BlogPostViewController.swift */,
 				A1A6D3D21A719AF300B08959 /* ContentfulDataManager.swift */,
 				A1B68C7C1A791684001A5A0D /* CustomDateFormatter.swift */,
+				A18192D71A83A500005F95F3 /* ScrollableButtonBar.swift */,
 				A1B68C801A792840001A5A0D /* UIViewController-Extensions.swift */,
 			);
 			path = Code;
@@ -379,8 +385,10 @@
 				A1A6D3BB1A71962F00B08959 /* Blog.xcdatamodeld in Sources */,
 				A11232651A71BB5D0055C330 /* StoryboardIdentifiers.swift in Sources */,
 				A1A6D3CB1A7196E300B08959 /* Author.swift in Sources */,
+				A18192D81A83A500005F95F3 /* ScrollableButtonBar.swift in Sources */,
 				A1B68C811A792840001A5A0D /* UIViewController-Extensions.swift in Sources */,
 				A1A6D3D31A719AF300B08959 /* ContentfulDataManager.swift in Sources */,
+				A18192D61A8396FF005F95F3 /* Category.swift in Sources */,
 				A1B954B11A70FE6800B4F200 /* AppDelegate.swift in Sources */,
 				A1FFCF281A8005A5002F82A6 /* Hack.c in Sources */,
 				A1FFCEF01A7FB111002F82A6 /* BlogPostByAuthorList.swift in Sources */,

@@ -2,6 +2,8 @@
 
 public enum SegueIdentifier : String {
     case BlogPostByAuthorSegue = "BlogPostByAuthorSegue"
+    case EmbedAuthorsBarSegue = "EmbedAuthorsBarSegue"
+    case EmbedCategoriesBarSegue = "EmbedCategoriesBarSegue"
 }
 
 public enum ViewControllerStoryboardIdentifier : String {

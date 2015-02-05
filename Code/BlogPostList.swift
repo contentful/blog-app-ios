@@ -74,7 +74,7 @@ class BlogPostList: UITableViewController {
                     tcell.textLabel?.text = post.title
 
                     if let date = post.date {
-                        let authorString = String(format:"by %@", post.author != nil ? post.author!.name : NSLocalizedString("Unknown", comment: "Unknown author"))
+                        let authorString = post.author != nil ? NSLocalizedString("by ", comment: "") + ((post.author!.array as NSArray).valueForKey("name") as NSArray).componentsJoinedByString(", ") : NSLocalizedString("Unknown", comment: "Unknown author")
                         let dateString = NSDateFormatter.customDateFormatter().stringFromDate(date)
                         tcell.detailTextLabel?.text = String(format:"%@. %@", dateString.uppercaseString, self.showsAuthor ? authorString : "")
                     }

@@ -15,3 +15,4 @@ void _TFC4Blog5Assetg5widthCSo8NSNumber() {}
 void _TFC4Blog5Assetg6heightCSo8NSNumber() {}
 void _TFC4Blog6Authorg10identifierSS() { }
 void _TFC4Blog4Postg10identifierSS() { }
+void _TFC4Blog8Categoryg10identifierSS() { }
