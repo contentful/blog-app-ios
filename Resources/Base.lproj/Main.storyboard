@@ -164,10 +164,10 @@ The first part of the plan would raise taxes on capital gains — money made thr
             </objects>
             <point key="canvasLocation" x="1441" y="593"/>
         </scene>
-        <!--Author View Controller-->
+        <!--Post List Metadata View Controller-->
         <scene sceneID="6tU-32-pyF">
             <objects>
-                <viewController storyboardIdentifier="AuthorViewControllerId" id="dSZ-DQ-qVa" customClass="AuthorViewController" customModule="Blog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthorViewControllerId" id="dSZ-DQ-qVa" customClass="PostListMetadataViewController" customModule="Blog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ylm-LK-Dvs"/>
                         <viewControllerLayoutGuide type="bottom" id="orH-pW-CuR"/>
@@ -244,10 +244,10 @@ The first part of the plan would raise taxes on capital gains — money made thr
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="authorBio" destination="jKY-sO-Mev" id="hhF-VH-NCG"/>
-                        <outlet property="authorImage" destination="xeB-6e-9HZ" id="vUs-O3-tPm"/>
-                        <outlet property="authorName" destination="T3D-C2-A9r" id="Ch9-e2-Scr"/>
+                        <outlet property="bodyLabel" destination="jKY-sO-Mev" id="H7m-KU-9e0"/>
+                        <outlet property="imageView" destination="xeB-6e-9HZ" id="B8p-2e-nrf"/>
                         <outlet property="numberOfPostLabel" destination="oim-fv-Fwl" id="acB-Np-o5q"/>
+                        <outlet property="titleLabel" destination="T3D-C2-A9r" id="hav-tE-V8f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kW6-Rd-0Ee" userLabel="First Responder" sceneMemberID="firstResponder"/>

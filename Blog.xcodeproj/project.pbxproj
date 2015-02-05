@@ -29,7 +29,7 @@
 		A1B954C71A70FE6800B4F200 /* BlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B954C61A70FE6800B4F200 /* BlogTests.swift */; };
 		A1BE2AE91A72512800FC53EC /* BlogPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE2AE81A72512800FC53EC /* BlogPostViewController.swift */; };
 		A1FFCEF01A7FB111002F82A6 /* BlogPostByAuthorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FFCEEF1A7FB111002F82A6 /* BlogPostByAuthorList.swift */; };
-		A1FFCEF21A7FCCEA002F82A6 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FFCEF11A7FCCEA002F82A6 /* AuthorViewController.swift */; };
+		A1FFCEF21A7FCCEA002F82A6 /* PostListMetadataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FFCEF11A7FCCEA002F82A6 /* PostListMetadataViewController.swift */; };
 		A1FFCF281A8005A5002F82A6 /* Hack.c in Sources */ = {isa = PBXBuildFile; fileRef = A1FFCF261A8005A5002F82A6 /* Hack.c */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +73,7 @@
 		A1B954C61A70FE6800B4F200 /* BlogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTests.swift; sourceTree = "<group>"; };
 		A1BE2AE81A72512800FC53EC /* BlogPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostViewController.swift; sourceTree = "<group>"; };
 		A1FFCEEF1A7FB111002F82A6 /* BlogPostByAuthorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostByAuthorList.swift; sourceTree = "<group>"; };
-		A1FFCEF11A7FCCEA002F82A6 /* AuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
+		A1FFCEF11A7FCCEA002F82A6 /* PostListMetadataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListMetadataViewController.swift; sourceTree = "<group>"; };
 		A1FFCF261A8005A5002F82A6 /* Hack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Hack.c; sourceTree = "<group>"; };
 		AD298FB237962F621B116880 /* libPods-Blog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Blog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28EBF7B59D270CF1DEFB976 /* Pods-Blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blog/Pods-Blog.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,12 +158,12 @@
 				A11232631A71BB4F0055C330 /* Generated */,
 				A1A6D3C91A71968200B08959 /* Model */,
 				A1B954B01A70FE6800B4F200 /* AppDelegate.swift */,
-				A1FFCEF11A7FCCEA002F82A6 /* AuthorViewController.swift */,
 				A1FFCEEF1A7FB111002F82A6 /* BlogPostByAuthorList.swift */,
 				A1B954B21A70FE6800B4F200 /* BlogPostList.swift */,
 				A1BE2AE81A72512800FC53EC /* BlogPostViewController.swift */,
 				A1A6D3D21A719AF300B08959 /* ContentfulDataManager.swift */,
 				A1B68C7C1A791684001A5A0D /* CustomDateFormatter.swift */,
+				A1FFCEF11A7FCCEA002F82A6 /* PostListMetadataViewController.swift */,
 				A18192D71A83A500005F95F3 /* ScrollableButtonBar.swift */,
 				A1B68C801A792840001A5A0D /* UIViewController-Extensions.swift */,
 			);
@@ -392,7 +392,7 @@
 				A1B954B11A70FE6800B4F200 /* AppDelegate.swift in Sources */,
 				A1FFCF281A8005A5002F82A6 /* Hack.c in Sources */,
 				A1FFCEF01A7FB111002F82A6 /* BlogPostByAuthorList.swift in Sources */,
-				A1FFCEF21A7FCCEA002F82A6 /* AuthorViewController.swift in Sources */,
+				A1FFCEF21A7FCCEA002F82A6 /* PostListMetadataViewController.swift in Sources */,
 				A1B68C7D1A791684001A5A0D /* CustomDateFormatter.swift in Sources */,
 				A1A6D3CD1A7196E400B08959 /* Post.swift in Sources */,
 			);

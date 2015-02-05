@@ -29,6 +29,7 @@ class BlogPostListCell : UITableViewCell {
 class BlogPostList: UITableViewController {
     var dataManager: ContentfulDataManager? = nil
     var dataSource: CoreDataFetchDataSource? = nil
+    var metadataViewController: PostListMetadataViewController! = nil
     var predicate: String? = nil
     var showsAuthor: Bool = true
 
@@ -41,6 +42,17 @@ class BlogPostList: UITableViewController {
 
             self.dataSource?.performFetch()
         })
+    }
+
+    func showMetadataHeader() {
+        tableView.contentInset = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 0.0, right: 0.0)
+
+        metadataViewController = storyboard?.instantiateViewControllerWithIdentifier(ViewControllerStoryboardIdentifier.AuthorViewControllerId.rawValue) as PostListMetadataViewController
+        metadataViewController.client = dataManager?.client
+        metadataViewController.view.autoresizingMask = .None
+        metadataViewController.view.frame.size.height = 160.0
+
+        tableView.tableHeaderView = metadataViewController.view
     }
 
     override func viewDidLoad() {
@@ -103,6 +115,12 @@ class BlogPostList: UITableViewController {
             blogPostViewController?.post = post
 
             navigationController?.pushViewController(blogPostViewController!, animated: true)
+        }
+    }
+
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if metadataViewController != nil {
+            metadataViewController.numberOfPosts = tableView.numberOfRowsInSection(0)
         }
     }
 }
