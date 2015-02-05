@@ -2,6 +2,7 @@
 
 public enum SegueIdentifier : String {
     case BlogPostByAuthorSegue = "BlogPostByAuthorSegue"
+    case BlogPostByCategorySegue = "BlogPostByCategorySegue"
     case EmbedAuthorsBarSegue = "EmbedAuthorsBarSegue"
     case EmbedCategoriesBarSegue = "EmbedCategoriesBarSegue"
 }

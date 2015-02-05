@@ -30,9 +30,10 @@ class PostListMetadataViewController: UIViewController {
     var numberOfPosts: Int {
         get { return 0 }
         set {
-            numberOfPostLabel.text = String(format: "%d posts by %@", newValue, metadata.title!)
+            numberOfPostLabel.text = String(format: numberOfPostsFormatString, newValue, metadata.title!)
         }
     }
+    var numberOfPostsFormatString = "%d posts by %@"
 
     override func viewDidLoad() {
         super.viewDidLoad()

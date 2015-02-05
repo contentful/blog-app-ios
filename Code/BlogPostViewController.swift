@@ -43,10 +43,19 @@ class BlogPostViewController: UIViewController {
             }
         }
 
+        if segue.identifier == SegueIdentifier.BlogPostByCategorySegue.rawValue {
+            let destination = segue.destinationViewController as BlogPostByCategoryList
+            destination.category = sender as Category
+        }
+
         if segue.identifier == SegueIdentifier.EmbedCategoriesBarSegue.rawValue {
             if let categories = post.category {
                 let destination = segue.destinationViewController as ScrollableButtonBar
                 destination.objects = categories.array
+
+                destination.tapHandler = { (object: AnyObject) -> Void in
+                    self.performSegueWithIdentifier(SegueIdentifier.BlogPostByCategorySegue.rawValue, sender: object as Category)
+                }
             }
         }
     }

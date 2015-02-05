@@ -158,6 +158,7 @@ The first part of the plan would raise taxes on capital gains — money made thr
                         <outlet property="metadataLabel" destination="6c1-gv-ekQ" id="oX7-tv-5ZP"/>
                         <outlet property="titleLabel" destination="EKG-Bh-Mwf" id="qdi-6I-bbS"/>
                         <segue destination="b9K-JG-cZd" kind="show" identifier="BlogPostByAuthorSegue" id="WnJ-vi-U4T"/>
+                        <segue destination="vkq-Ly-T8z" kind="show" identifier="BlogPostByCategorySegue" id="F1C-Qm-iCq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckI-fW-6Wx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -327,6 +328,24 @@ The first part of the plan would raise taxes on capital gains — money made thr
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjT-LS-g5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2062.5" y="703.5"/>
+        </scene>
+        <!--Blog posts-->
+        <scene sceneID="HQx-Pp-UEO">
+            <objects>
+                <tableViewController title="Blog posts" id="vkq-Ly-T8z" customClass="BlogPostByCategoryList" customModule="Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Dy-ko-v8w">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="vkq-Ly-T8z" id="dTB-8Q-msR"/>
+                            <outlet property="delegate" destination="vkq-Ly-T8z" id="lDK-uW-ghb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w83-Xj-3ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2153" y="1349"/>
         </scene>
     </scenes>
 </document>
