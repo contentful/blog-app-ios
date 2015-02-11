@@ -25,7 +25,7 @@ PODS:
   - ContentfulDeliveryAPI (1.4.8):
     - AFNetworking
     - ISO8601DateFormatter
-  - ContentfulDialogs (0.2.0):
+  - ContentfulDialogs (0.3.0):
     - Bypass
     - CGLMail
     - ContentfulDeliveryAPI (~> 1.4.7)
@@ -55,7 +55,7 @@ SPEC CHECKSUMS:
   Bypass: 225bc63ebb09e5674c1fc460b1708e775f68f52f
   CGLMail: ba03e1a69db3c27bad925fe1270cd99fada5ed69
   ContentfulDeliveryAPI: 4652d1fb65a08fdfbf01d5e3c399da01409bda00
-  ContentfulDialogs: e4a668f43ee864be7275033f8f27e92eeac25261
+  ContentfulDialogs: 103ceb9f0163fdbd661aae4197fc33ce88ee96a7
   ContentfulPersistence: 9c7117962b4cf9a069756639d3275ecf7cee0364
   ContentfulStyle: 0f41944b1efd8bba2a8f0c1ac0cf3910b1105949
   DDPageControl: 86d07bda58e325a427fb0d7c8fb650add2ff35c2
