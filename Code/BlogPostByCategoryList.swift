@@ -21,6 +21,7 @@ class BlogPostByCategoryList: BlogPostList {
 
         showMetadataHeader()
 
+        metadataViewController.backgroundView.backgroundColor = metadataViewController.backgroundView.backgroundColor?.colorWithAlphaComponent(0.85)
         metadataViewController.metadata = PostListMetadata(body: category.categoryDescription, photo: category.icon, title: category.title)
         metadataViewController.numberOfPostsFormatString =  "%d posts in %@"
     }

@@ -13,6 +13,7 @@ struct PostListMetadata {
 }
 
 class PostListMetadataViewController: UIViewController {
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var numberOfPostLabel: UILabel!
