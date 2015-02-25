@@ -17,6 +17,7 @@ target 'Blog' do
 #use_frameworks!
 
 pod 'Bypass'
+pod 'ContentfulDeliveryAPI', '~> 1.4.9'
 pod 'ContentfulDialogs'
 pod 'ContentfulPersistence'
 pod 'ContentfulStyle', :head
