@@ -27,34 +27,34 @@ class BlogPostViewController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == SegueIdentifier.BlogPostByAuthorSegue.rawValue {
-            let destination = segue.destinationViewController as BlogPostByAuthorList
-            destination.author = sender as Author
+            let destination = segue.destinationViewController as! BlogPostByAuthorList
+            destination.author = sender as! Author
         }
 
         if segue.identifier == SegueIdentifier.EmbedAuthorsBarSegue.rawValue {
             if let authors = post.author {
-                let destination = segue.destinationViewController as ScrollableButtonBar
+                let destination = segue.destinationViewController as! ScrollableButtonBar
                 destination.titleKey = "name"
                 destination.objects = authors.array
 
                 destination.tapHandler = { (object: AnyObject) -> Void in
-                    self.performSegueWithIdentifier(SegueIdentifier.BlogPostByAuthorSegue.rawValue, sender: object as Author)
+                    self.performSegueWithIdentifier(SegueIdentifier.BlogPostByAuthorSegue.rawValue, sender: object as! Author)
                 }
             }
         }
 
         if segue.identifier == SegueIdentifier.BlogPostByCategorySegue.rawValue {
-            let destination = segue.destinationViewController as BlogPostByCategoryList
-            destination.category = sender as Category
+            let destination = segue.destinationViewController as! BlogPostByCategoryList
+            destination.category = sender as! Category
         }
 
         if segue.identifier == SegueIdentifier.EmbedCategoriesBarSegue.rawValue {
             if let categories = post.category {
-                let destination = segue.destinationViewController as ScrollableButtonBar
+                let destination = segue.destinationViewController as! ScrollableButtonBar
                 destination.objects = categories.array
 
                 destination.tapHandler = { (object: AnyObject) -> Void in
-                    self.performSegueWithIdentifier(SegueIdentifier.BlogPostByCategorySegue.rawValue, sender: object as Category)
+                    self.performSegueWithIdentifier(SegueIdentifier.BlogPostByCategorySegue.rawValue, sender: object as! Category)
                 }
             }
         }
@@ -63,7 +63,7 @@ class BlogPostViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        let scrollView = view as UIScrollView
+        let scrollView = view as! UIScrollView
         scrollView.contentSize = CGSize(width: scrollView.frame.size.width,
             height: bodyView.frame.origin.y + bodyView.intrinsicContentSize().height + categoriesLabel.intrinsicContentSize().height + 10.0)
     }

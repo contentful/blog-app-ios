@@ -19,8 +19,8 @@ class ScrollableButtonBar: UIViewController {
             view.addSubview(scrollView)
 
             var x = CGFloat(0.0), maxHeight = CGFloat(0.0)
-            for (index, object) in enumerate(objects) {
-                let button = UIButton.buttonWithType(.System) as UIButton
+            for (index, object) in objects.enumerate() {
+                let button = UIButton(type:.System) as UIButton
                 button.addTarget(self, action: "tapped:", forControlEvents: .TouchUpInside)
                 button.frame.origin.x = x
                 button.setTitle(object.valueForKey(titleKey) as? String, forState: .Normal)

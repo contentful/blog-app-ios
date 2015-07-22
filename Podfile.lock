@@ -31,8 +31,8 @@ PODS:
     - ContentfulDeliveryAPI (>= 1.4.7)
     - DDPageControl
     - TSMiniWebBrowser@dblock
-  - ContentfulPersistence (0.1.0):
-    - ContentfulDeliveryAPI (>= 1.4.7)
+  - ContentfulPersistence (0.2.0):
+    - ContentfulDeliveryAPI (~> 1.4.7)
   - ContentfulStyle (HEAD based on 0.2.0):
     - EDColor
     - LatoFont
@@ -57,7 +57,7 @@ SPEC CHECKSUMS:
   CGLMail: 91fbbf8a1c0283bb804798dce471f840b0f58488
   ContentfulDeliveryAPI: 4fb28d516a3d25cf8b00b04e9ebd00f27b1e11e6
   ContentfulDialogs: 66cd16becce26939cf9db091d48a377df1f2246a
-  ContentfulPersistence: 95cce671bb1d36256707025fe1ee5d0e576693ce
+  ContentfulPersistence: 8645e5a5def356475246d9fc7f1bb9e74a1fe7a1
   ContentfulStyle: 0f41944b1efd8bba2a8f0c1ac0cf3910b1105949
   DDPageControl: 60c7d350477922b1e67fcf927f7e50eddc7dd207
   EDColor: 89d19a013279a5604d61650721c15f20fefaaf00
@@ -66,4 +66,4 @@ SPEC CHECKSUMS:
   LatoFont: bcfb0239c339af9aacf4b3061d5268e53e080732
   TSMiniWebBrowser@dblock: 6eb565b44cc2e5cd5eee7660ee5c21f8afae415c
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.36.0.beta.1

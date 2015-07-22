@@ -56,7 +56,9 @@ class ContentfulDataManager: NSObject {
                 defaults.setValue(note.userInfo![AppDelegate.AccessToken], forKey: AppDelegate.AccessToken)
 
                 let keyWindow = UIApplication.sharedApplication().keyWindow!
-                keyWindow.rootViewController = keyWindow.rootViewController?.storyboard?.instantiateInitialViewController() as? UIViewController
+                if let rootVC = keyWindow.rootViewController?.storyboard?.instantiateInitialViewController() {
+                    keyWindow.rootViewController = rootVC
+                }
             }
         })
     }

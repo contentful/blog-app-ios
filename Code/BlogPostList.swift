@@ -47,7 +47,7 @@ class BlogPostList: UITableViewController {
     func showMetadataHeader() {
         tableView.contentInset = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 0.0, right: 0.0)
 
-        metadataViewController = storyboard?.instantiateViewControllerWithIdentifier(ViewControllerStoryboardIdentifier.AuthorViewControllerId.rawValue) as PostListMetadataViewController
+        metadataViewController = storyboard?.instantiateViewControllerWithIdentifier(ViewControllerStoryboardIdentifier.AuthorViewControllerId.rawValue) as! PostListMetadataViewController
         metadataViewController.client = dataManager?.client
         metadataViewController.view.autoresizingMask = .None
         metadataViewController.view.frame.size.height = 160.0
@@ -86,7 +86,7 @@ class BlogPostList: UITableViewController {
                     tcell.textLabel?.text = post.title
 
                     if let date = post.date {
-                        let authorString = post.author != nil ? NSLocalizedString("by ", comment: "") + ((post.author!.array as NSArray).valueForKey("name") as NSArray).componentsJoinedByString(", ") : NSLocalizedString("Unknown", comment: "Unknown author")
+                        let authorString = post.author != nil ? NSLocalizedString("by ", comment: "") + ((post.author!.array as NSArray).valueForKey("name") as! NSArray).componentsJoinedByString(", ") : NSLocalizedString("Unknown", comment: "Unknown author")
                         let dateString = NSDateFormatter.customDateFormatter().stringFromDate(date)
                         tcell.detailTextLabel?.text = String(format:"%@. %@", dateString.uppercaseString, self.showsAuthor ? authorString : "")
                     }
