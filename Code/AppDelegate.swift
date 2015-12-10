@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         let components = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
 
         if let components = components {
@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     return false
                 }
 
-                let spaceKey = path.lastPathComponent
+                let spaceKey = NSURL(fileURLWithPath: path).lastPathComponent
                 var accessToken: String? = nil
 
                 for parameter in components.query!.componentsSeparatedByString("&") {
@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                 }
 
-                if let accessToken = accessToken {
+                if let accessToken = accessToken, spaceKey = spaceKey {
                     NSUserDefaults.standardUserDefaults().setValue(accessToken, forKey: AppDelegate.AccessToken)
                     NSUserDefaults.standardUserDefaults().setValue(spaceKey, forKey: AppDelegate.SpaceKey)
 

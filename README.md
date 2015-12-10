@@ -8,19 +8,14 @@ This is an iOS application example for the [Contentful][1] blog space template.
 
 ## Usage
 
-- Create a space with the "Blog" space template on [Contentful][1]
-- Clone this repo and setup [CocoaPods][2] for it:
+- Simply run
 
 ```
 $ make setup
 ```
 
-- Use cocoapods-keys to setup your space credentials for it:
-
-```
-$ bundle exec pod keys set BlogSpaceId $YOUR_SPACE_ID
-$ bundle exec pod keys set BlogAccessToken $YOUR_ACCESS_TOKEN
-```
+This will install all necessary RubyGems, create a new space on [Contentful][1] using 
+[Contentful Bootstrap][3], install all necessary [CocoaPods][2] and setup API keys automatically.
 
 - Now you're ready to use it!
 
@@ -37,3 +32,4 @@ Copyright (c) 2015 Contentful GmbH. See LICENSE for further details.
 
 [1]: https://www.contentful.com
 [2]: http://cocoapods.org
+[3]: https://github.com/contentful-labs/contentful-bootstrap.rb
