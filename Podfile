@@ -12,8 +12,6 @@ platform :ios, '8.0'
 
 inhibit_all_warnings!
 
-target 'Blog' do
-
 #use_frameworks!
 
 pod 'Bypass'
@@ -22,9 +20,7 @@ pod 'ContentfulDialogs'
 pod 'ContentfulPersistence'
 pod 'ContentfulStyle', :head
 
-end
-
-target 'BlogTests' do
+target 'BlogTests', :exclusive => true do
 
 pod 'FBSnapshotTestCase'
 

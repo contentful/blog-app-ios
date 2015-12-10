@@ -40,6 +40,7 @@ PODS:
   - EDColor (0.4.0)
   - FBSnapshotTestCase (1.5)
   - ISO8601DateFormatter (0.7)
+  - Keys (1.0.0)
   - LatoFont (1.0.0)
   - TSMiniWebBrowser@dblock (1.1)
 
@@ -50,6 +51,11 @@ DEPENDENCIES:
   - ContentfulPersistence
   - ContentfulStyle (HEAD)
   - FBSnapshotTestCase
+  - Keys (from `Pods/CocoaPodsKeys`)
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
@@ -63,7 +69,8 @@ SPEC CHECKSUMS:
   EDColor: 89d19a013279a5604d61650721c15f20fefaaf00
   FBSnapshotTestCase: 26f32d8fa9eb30e9f09712ecfb097808bc79b898
   ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
+  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   LatoFont: bcfb0239c339af9aacf4b3061d5268e53e080732
   TSMiniWebBrowser@dblock: 6eb565b44cc2e5cd5eee7660ee5c21f8afae415c
 
-COCOAPODS: 0.36.0.beta.1
+COCOAPODS: 0.39.0
