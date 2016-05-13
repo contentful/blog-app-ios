@@ -21,7 +21,7 @@ class ScrollableButtonBar: UIViewController {
             var x = CGFloat(0.0), maxHeight = CGFloat(0.0)
             for (index, object) in objects.enumerate() {
                 let button = UIButton(type:.System) as UIButton
-                button.addTarget(self, action: "tapped:", forControlEvents: .TouchUpInside)
+                button.addTarget(self, action: #selector(ScrollableButtonBar.tapped(_:)), forControlEvents: .TouchUpInside)
                 button.frame.origin.x = x
                 button.setTitle(object.valueForKey(titleKey) as? String, forState: .Normal)
                 button.tag = index

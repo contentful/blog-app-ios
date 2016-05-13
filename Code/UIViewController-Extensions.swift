@@ -11,13 +11,13 @@ import UIKit
 extension UIViewController {
     func addInfoButton() {
         let infoButton = UIButton(type:.InfoLight) as UIButton
-        infoButton.addTarget(self, action: "infoTapped", forControlEvents: .TouchUpInside)
+        infoButton.addTarget(self, action: #selector(UIViewController.infoTapped), forControlEvents: .TouchUpInside)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: infoButton)
     }
 
     func infoTapped() {
         let aboutUs = UINavigationController(rootViewController: CDAAboutUsViewController())
-        aboutUs.topViewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target:aboutUs, action: "dismissAnimated")
+        aboutUs.topViewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target:aboutUs, action: #selector(UIViewController.dismissAnimated))
         self.presentViewController(aboutUs, animated: true, completion: nil)
     }
 

@@ -77,7 +77,7 @@ class BlogPostList: UITableViewController {
                 tcell.textLabel?.font = UIFont.titleBarFont()
                 tcell.textLabel?.numberOfLines = 2
 
-                if tcell.respondsToSelector("setLayoutMargins:") {
+                if tcell.respondsToSelector(Selector("setLayoutMargins:")) {
                     tcell.layoutMargins = UIEdgeInsetsZero
                     tcell.preservesSuperviewLayoutMargins = false
                 }
