@@ -14,13 +14,17 @@ inhibit_all_warnings!
 
 #use_frameworks!
 
+target 'Blog' do
+
 pod 'Bypass'
 pod 'ContentfulDeliveryAPI', '~> 1.4.9'
 pod 'ContentfulDialogs'
 pod 'ContentfulPersistence'
-pod 'ContentfulStyle', :head
+pod 'ContentfulStyle', :git => 'https://github.com/contentful/contentful-ios-style.git'
 
-target 'BlogTests', :exclusive => true do
+end
+
+target 'BlogTests' do
 
 pod 'FBSnapshotTestCase'
 

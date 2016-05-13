@@ -33,11 +33,11 @@ PODS:
     - TSMiniWebBrowser@dblock
   - ContentfulPersistence (0.2.0):
     - ContentfulDeliveryAPI (~> 1.4.7)
-  - ContentfulStyle (HEAD based on 0.2.0):
+  - ContentfulStyle (0.2.0):
     - EDColor
     - LatoFont
   - DDPageControl (0.1)
-  - EDColor (0.4.0)
+  - EDColor (1.0.0)
   - FBSnapshotTestCase (1.5)
   - ISO8601DateFormatter (0.7)
   - Keys (1.0.0)
@@ -49,13 +49,20 @@ DEPENDENCIES:
   - ContentfulDeliveryAPI (~> 1.4.9)
   - ContentfulDialogs
   - ContentfulPersistence
-  - ContentfulStyle (HEAD)
+  - ContentfulStyle (from `https://github.com/contentful/contentful-ios-style.git`)
   - FBSnapshotTestCase
   - Keys (from `Pods/CocoaPodsKeys`)
 
 EXTERNAL SOURCES:
+  ContentfulStyle:
+    :git: https://github.com/contentful/contentful-ios-style.git
   Keys:
     :path: Pods/CocoaPodsKeys
+
+CHECKOUT OPTIONS:
+  ContentfulStyle:
+    :commit: 4b84970cebb11225670357c4a962a599820b022b
+    :git: https://github.com/contentful/contentful-ios-style.git
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
@@ -64,13 +71,15 @@ SPEC CHECKSUMS:
   ContentfulDeliveryAPI: 4fb28d516a3d25cf8b00b04e9ebd00f27b1e11e6
   ContentfulDialogs: 66cd16becce26939cf9db091d48a377df1f2246a
   ContentfulPersistence: 8645e5a5def356475246d9fc7f1bb9e74a1fe7a1
-  ContentfulStyle: 0f41944b1efd8bba2a8f0c1ac0cf3910b1105949
+  ContentfulStyle: af9eb49cfafa472641e2600d913c786d91dc1461
   DDPageControl: 60c7d350477922b1e67fcf927f7e50eddc7dd207
-  EDColor: 89d19a013279a5604d61650721c15f20fefaaf00
+  EDColor: c83f9a61f9f9b3c23d541f1feb561558e29cb088
   FBSnapshotTestCase: 26f32d8fa9eb30e9f09712ecfb097808bc79b898
   ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
-  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
+  Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
   LatoFont: bcfb0239c339af9aacf4b3061d5268e53e080732
   TSMiniWebBrowser@dblock: 6eb565b44cc2e5cd5eee7660ee5c21f8afae415c
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: d0517ab4b66439c637d73f0ce030a229e11d965d
+
+COCOAPODS: 1.0.0
